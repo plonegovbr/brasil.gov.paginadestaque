@@ -10,6 +10,6 @@
         handler=".hooks.process_microsite"
      />
 
-	<subscriber handler=".hooks.microsite_expiration_enforcer" />
+    <subscriber handler=".hooks.microsite_expiration_enforcer" />
 
 </configure>

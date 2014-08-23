@@ -4,8 +4,8 @@
     xmlns:i18n="http://namespaces.zope.org/i18n"
     i18n_domain="brasil.gov.paginadestaque">
 
-  <include package="sc.microsite" />  
-  <include package="collective.z3cform.datagridfield" />  
+  <include package="sc.microsite" />
+  <include package="collective.z3cform.datagridfield" />
 
   <include package=".behaviors" />
   <include package=".browser" />

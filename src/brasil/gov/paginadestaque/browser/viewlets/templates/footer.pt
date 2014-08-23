@@ -1,11 +1,11 @@
 <div tal:condition="view/links" class="footer">
   <ul tal:repeat="link view/links" class="footer_links">
-  	<li class="footer_link_item">
-  		<a href="" tal:attributes="href link/url; title string:${link/title_1} ${link/title_2}">
-  		<span tal:content="link/title_1">Minist&eacute;rio</span>
-  		<br />
-  		<span tal:content="link/title_2">do Esporte</span>
-  		</a>
-  	</li>
+    <li class="footer_link_item">
+        <a href="" tal:attributes="href link/url; title string:${link/title_1} ${link/title_2}">
+        <span tal:content="link/title_1">Minist&eacute;rio</span>
+        <br />
+        <span tal:content="link/title_2">do Esporte</span>
+        </a>
+    </li>
   </ul>
 </div>
