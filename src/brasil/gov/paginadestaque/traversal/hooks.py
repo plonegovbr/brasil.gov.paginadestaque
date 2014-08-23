@@ -1,12 +1,10 @@
 # -*- coding: utf-8 -*-
 from AccessControl import getSecurityManager
 from brasil.gov.paginadestaque.behaviors.expiration import ISmartExpiration
-from brasil.gov.paginadestaque.interfaces import IBrowserLayer
 from brasil.gov.paginadestaque.interfaces import IPaginaDestaque
 from DateTime import DateTime
 from plone import api
 from Products.CMFCore.permissions import ModifyPortalContent
-from sc.microsite.interfaces import IMicrosite
 from zExceptions import Redirect
 from zope.component import adapter
 from zope.interface import directlyProvidedBy
@@ -14,10 +12,6 @@ from zope.interface import directlyProvides
 from ZPublisher.interfaces import IPubBeforeCommit
 
 import datetime
-
-
-def _is_request_for_microsite(object, request):
-    return (IBrowserLayer.providedBy(request) and IMicrosite.providedBy(object))
 
 
 def _is_expired(expiration_date):
@@ -39,10 +33,6 @@ def process_microsite(object, event):
        o microsite no request
     """
     request = event.request
-
-    # Must have our package installed
-    if not _is_request_for_microsite(object, request):
-        return
 
     # Disable columns
     request.set('disable_plone.leftcolumn', 1)
