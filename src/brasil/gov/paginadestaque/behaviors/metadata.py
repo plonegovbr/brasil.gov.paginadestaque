@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from Acquisition import aq_base
 from brasil.gov.paginadestaque import _
 from collective.z3cform.datagridfield import DataGridFieldFactory
 from collective.z3cform.datagridfield import DictRow
@@ -65,8 +66,9 @@ class PaginaDestaque(MetadataBase):
     """
 
     def _set_title(self):
-        title_1 = getattr(self.context, 'title_1', u'')
-        title_2 = getattr(self.context, 'title_2', u'')
+        context = aq_base(self.context)
+        title_1 = getattr(context, 'title_1', u'')
+        title_2 = getattr(context, 'title_2', u'')
         title = u'{0} {1}'.format(title_1, title_2)
         self.context.title = title
 
