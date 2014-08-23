@@ -31,10 +31,11 @@ def default_expires(context):
 def validate_url(value):
     """Checagem simples se o valor informado representa um site"""
     if not value:
-        return
+        return True
     regex = re.compile(r'(%s)s?://[^\s\r\n]+' % '|'.join(valid_protocols))
     if not regex.match(value):
         raise Invalid(_(u'URL nao valida.'))
+    return True
 
 
 class ISmartExpiration(model.Schema):
