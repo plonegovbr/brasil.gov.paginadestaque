@@ -4,7 +4,7 @@ from setuptools import find_packages
 from setuptools import setup
 
 version = '0.1'
-description = 'FIXME'
+description = 'Complemento ao Portal Padrao para criacao de microsites e campanhas'
 long_description = (
     open('README.rst').read() + '\n' +
     open('CONTRIBUTORS.rst').read() + '\n' +
