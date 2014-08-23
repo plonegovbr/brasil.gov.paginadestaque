@@ -5,7 +5,7 @@
     i18n_domain="brasil.gov.paginadestaque">
 
     <subscriber
-        for="plone.app.layout.navigation.interfaces.INavigationRoot
+        for="sc.microsite.interfaces.IMicrosite
              zope.traversing.interfaces.IBeforeTraverseEvent"
         handler=".hooks.process_microsite"
      />
