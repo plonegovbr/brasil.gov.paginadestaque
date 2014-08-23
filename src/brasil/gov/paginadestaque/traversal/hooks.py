@@ -1,15 +1,19 @@
 # -*- coding: utf-8 -*-
 from AccessControl import getSecurityManager
+from brasil.gov.paginadestaque.behaviors.expiration import ISmartExpiration
 from brasil.gov.paginadestaque.interfaces import IBrowserLayer
 from brasil.gov.paginadestaque.interfaces import IPaginaDestaque
+from DateTime import DateTime
 from plone import api
 from Products.CMFCore.permissions import ModifyPortalContent
 from sc.microsite.interfaces import IMicrosite
 from zExceptions import Redirect
 from zope.component import adapter
-from ZPublisher.interfaces import IPubBeforeCommit
 from zope.interface import directlyProvidedBy
 from zope.interface import directlyProvides
+from ZPublisher.interfaces import IPubBeforeCommit
+
+import datetime
 
 
 def _is_request_for_microsite(object, request):

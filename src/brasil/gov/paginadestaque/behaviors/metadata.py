@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
+from brasil.gov.paginadestaque import _
 from collective.z3cform.datagridfield import DataGridFieldFactory
 from collective.z3cform.datagridfield import DictRow
-from plone.app.dexterity.behaviors.metadata import DCFieldProperty
-from brasil.gov.paginadestaque import _
 from plone.app.dexterity.behaviors.metadata import MetadataBase
 from plone.autoform import directives as form
 from plone.autoform.interfaces import IFormFieldProvider
