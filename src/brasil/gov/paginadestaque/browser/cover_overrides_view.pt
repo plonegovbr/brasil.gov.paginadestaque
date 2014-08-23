@@ -1,0 +1,23 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="collective.cover">
+<head>
+<metal:styles fill-slot="style_slot">
+    <style type="text/css"
+        tal:condition="view/background"
+        tal:content="view/background" />
+</metal:styles>
+</head>
+
+<body>
+<metal:main fill-slot="main">
+    <div tal:define="layout nocall:context/@@layout"
+         tal:replace="structure layout/render_view" />
+    <div class="visualClear"><!-- --></div>
+</metal:main>
+</body>
+</html>

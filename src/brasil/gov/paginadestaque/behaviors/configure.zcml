@@ -22,4 +22,11 @@
         for="sc.microsite.interfaces.IMicrosite"
         />
 
+  <plone:behavior
+      title="Background image"
+      description="Adds the possibility of having a background image on the default view of the item."
+      provides="brasil.gov.paginadestaque.behaviors.interfaces.IBackgroundImage"
+      for="collective.cover.content.ICover"
+      />
+
 </configure>

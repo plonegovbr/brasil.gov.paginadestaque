@@ -40,6 +40,7 @@ setup(
     install_requires=[
         'collective.cover',
         'collective.z3cform.datagridfield',
+        'five.grok',
         'plone.api',
         'plone.app.upgrade',
         'Products.CMFPlone >=4.3',

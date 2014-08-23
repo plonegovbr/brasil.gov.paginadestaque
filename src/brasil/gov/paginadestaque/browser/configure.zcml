@@ -1,9 +1,12 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:grok="http://namespaces.zope.org/grok"
     i18n_domain="brasil.gov.paginadestaque">
 
   <!-- Viewlets -->
   <include package='.viewlets' />
+  <include package="five.grok" />
+  <grok:grok package="." />
 
 </configure>
