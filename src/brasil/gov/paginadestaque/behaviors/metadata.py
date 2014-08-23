@@ -46,8 +46,8 @@ class IPaginaDestaque(model.Schema):
 
     form.widget(links=DataGridFieldFactory)
     links = schema.List(
-        title=_(u"Footer links"),
-        value_type=DictRow(title=_(u"Link"), schema=ILinkRow),
+        title=_(u'Footer links'),
+        value_type=DictRow(title=_(u'Link'), schema=ILinkRow),
         required=False,
     )
 

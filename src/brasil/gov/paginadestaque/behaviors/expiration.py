@@ -45,8 +45,8 @@ class ISmartExpiration(model.Schema):
         defaultFactory=default_expires,
         description=_(
             u'help_expiration_date',
-            default=u"When this date is reached, the content will no"
-                    u"longer be visible in listings and searches."),
+            default=u'When this date is reached, the content will no '
+                    u'longer be visible in listings and searches.'),
         required=False
     )
 
@@ -54,8 +54,8 @@ class ISmartExpiration(model.Schema):
         title=_(u'label_expires_redirect', default=u'Redirect to'),
         description=_(
             u'help_expires_redirect',
-            default=u"After expiration, requests will be redirected "
-                    u"to the url filled in here."),
+            default=u'After expiration, requests will be redirected '
+                    u'to the url filled in here.'),
         constraint=validate_url,
         required=False
     )
