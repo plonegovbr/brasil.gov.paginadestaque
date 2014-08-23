@@ -80,6 +80,8 @@ class SmartExpirationTestCase(unittest.TestCase):
         self.assertTrue(validate_url(u'https://www.simplesconsultoria.com.br'))
         self.assertTrue(validate_url(u'http://docs.plone.org/'))
         self.assertTrue(validate_url(u'https://plone.org/foundation/'))
+        # Como o campo nao eh obrigatorio, podemos passar um valor vazio
+        self.assertTrue(validate_url(u''))
 
     def test_validate_url_fail(self):
         # Erros de valor

@@ -42,10 +42,29 @@ class PaginaDestaqueTestCase(unittest.TestCase):
         behavior = PaginaDestaque(new_object)
         behavior.title_1 = u'Portal Brasil'
         behavior.title_2 = u'7 de Setembro'
+
+        self.assertEqual(
+            new_object.title_1,
+            u'Portal Brasil'
+        )
+
+        self.assertEqual(
+            new_object.title_2,
+            u'7 de Setembro'
+        )
+
         self.assertEqual(
             new_object.title,
             u'Portal Brasil 7 de Setembro'
         )
+
+        def set_title_1(value):
+            behavior.title_1 = value
+        self.assertRaises(ValueError, set_title_1, 'Uma string qualquer')
+
+        def set_title_2(value):
+            behavior.title_2 = value
+        self.assertRaises(ValueError, set_title_2, 'Uma string qualquer')
 
     def test_behavior_description(self):
         fti = queryUtility(IDexterityFTI, name='sc.microsite')
@@ -58,6 +77,11 @@ class PaginaDestaqueTestCase(unittest.TestCase):
             behavior.description,
             new_object.Description()
         )
+
+        def set_description(value):
+            behavior.description = value
+
+        self.assertRaises(ValueError, set_description, 'Uma string qualquer')
 
     def test_behavior_links(self):
         fti = queryUtility(IDexterityFTI, name='sc.microsite')
