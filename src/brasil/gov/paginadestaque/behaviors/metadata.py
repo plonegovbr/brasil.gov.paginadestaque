@@ -101,9 +101,19 @@ class PaginaDestaque(MetadataBase):
         self.context.description = value
     description = property(_get_description, _set_description)
 
-    links = DCFieldProperty(
-        IPaginaDestaque['links'],
-        get_name='links'
-    )
+    def _get_links(self):
+        links = getattr(self.context, 'links', [])
+        return links
+
+    def _set_links(self, value):
+        links = []
+        for item in value:
+            item['title'] = u'{0} {1}'.format(
+                item.get('title_1', u''),
+                item.get('title_2', u''),
+            )
+            links.append(item)
+        self.context.links = links
+    links = property(_get_links, _set_links)
 
 alsoProvides(IPaginaDestaque, IFormFieldProvider)
