@@ -15,12 +15,6 @@ class LogoViewlet(ViewletBase):
         root = api.portal.get_navigation_root(self.context)
         return root
 
-    def title(self):
-        """Retorna o titulo da Pagina Destaque
-        """
-        root = self.root()
-        return getattr(root, 'title', 'Portal Brasil')
-
     def title_1(self):
         """Retorna a primeira linha do titulo da Pagina Destaque
         """
