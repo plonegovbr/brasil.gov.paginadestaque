@@ -44,12 +44,12 @@ class PaginaDestaqueTestCase(unittest.TestCase):
         behavior.title_2 = u'7 de Setembro'
 
         self.assertEqual(
-            new_object.title_1,
+            behavior.title_1,
             u'Portal Brasil'
         )
 
         self.assertEqual(
-            new_object.title_2,
+            behavior.title_2,
             u'7 de Setembro'
         )
 
