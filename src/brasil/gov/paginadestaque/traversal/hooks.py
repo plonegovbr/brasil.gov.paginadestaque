@@ -20,6 +20,19 @@ def _is_request_for_microsite(object, request):
     return (IBrowserLayer.providedBy(request) and IMicrosite.providedBy(object))
 
 
+def _is_expired(expiration_date):
+    """Podemos receber um valor datetime, um valor DateTime
+       ou None.
+    """
+    if isinstance(expiration_date, datetime.datetime):
+        today = datetime.datetime.today()
+        return expiration_date < today
+    elif isinstance(expiration_date, DateTime):
+        return expiration_date.isPast()
+    else:
+        return False
+
+
 def process_microsite(object, event):
     """Interceptamos a requisicao antes do traversal ser feito em um
        microsite. Desabilitamos a coluna da esquerda e armazenamos
@@ -58,10 +71,11 @@ def microsite_expiration_enforcer(event):
     if not IPaginaDestaque.providedBy(request):
         return
 
-    expires = getattr(object, 'expires', None)
-    if expires and expires().isPast():
+    behavior = ISmartExpiration(object, None)
+    if behavior:
+        expired = behavior.expires and _is_expired(behavior.expires)
         sm = getSecurityManager()
-        if not sm.checkPermission(ModifyPortalContent, object):
+        if expired and not sm.checkPermission(ModifyPortalContent, object):
             portal = api.portal.get()
             expires_redirect = getattr(object, 'expires_redirect', portal.absolute_url())
             raise Redirect(expires_redirect)
