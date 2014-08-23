@@ -6,10 +6,15 @@ from brasil.gov.paginadestaque.traversal.hooks import _is_expired
 from brasil.gov.paginadestaque.testing import FUNCTIONAL_TESTING
 from DateTime import DateTime
 from plone import api
-from plone.app.testing import TEST_USER_NAME
-from plone.app.testing import TEST_USER_PASSWORD
+from plone.app.testing import SITE_OWNER_NAME
+from plone.app.testing import SITE_OWNER_PASSWORD
 from plone.testing.z2 import Browser
+from zope.component import getUtility
 from zope.interface.declarations import directlyProvides
+from plone.portlets.interfaces import IPortletType
+from plone.app.testing import setRoles
+from plone.app.testing import TEST_USER_ID
+
 
 import datetime
 import transaction
@@ -50,18 +55,25 @@ class TraversalTestCase(unittest.TestCase):
             page = microsite['a-page']
         return page
 
+    def setup_left_column_portlet(self):
+        # Adicionaremos um portlet de login
+        portlet = getUtility(IPortletType, name='portlets.Login')
+        mapping = self.portal.restrictedTraverse('++contextportlets++plone.leftcolumn')
+        addview = mapping.restrictedTraverse('+/' + portlet.addview)
+        addview()
+
     def setUp(self):
         self.portal = self.layer['portal']
         self.request = self.layer['request']
+        setRoles(self.portal, TEST_USER_ID, ['Manager'])
+        self.setup_left_column_portlet()
         directlyProvides(self.request, IBrowserLayer)
         self.portal.portal_workflow.setChainForPortalTypes(
             ['Document', 'sc.microsite', ],
             ['one_state_workflow'],
         )
         self.microsite = self.setup_microsite()
-        transaction.commit()
         self.page = self.setup_page(self.microsite)
-        transaction.commit()
         self.browser = Browser(self.layer['app'])
         transaction.commit()
 
@@ -78,6 +90,14 @@ class TraversalTestCase(unittest.TestCase):
         self.assertIn(u'<a href="http://plone.org/foundation">Plone Foundation</a>',
                       contents)
 
+    def test_plone_root_left_column_available(self):
+        browser = self.browser
+        browser.open('{0}'.format(self.portal.absolute_url()))
+        self.assertEqual(browser.headers['status'], '200 Ok')
+        contents = browser.contents.decode('utf-8')
+        # Porlet manager da esquerda deve estar visivel
+        self.assertIn(u'id="portal-column-one"', contents)
+
     def test_microsite_viewlets(self):
         browser = self.browser
         browser.open('{0}'.format(self.microsite.absolute_url()))
@@ -90,6 +110,14 @@ class TraversalTestCase(unittest.TestCase):
         # Viewlet de footer
         self.assertIn(u'class="footer_links"', contents)
 
+    def test_microsite_left_column_not_available(self):
+        browser = self.browser
+        browser.open('{0}'.format(self.microsite.absolute_url()))
+        self.assertEqual(browser.headers['status'], '200 Ok')
+        contents = browser.contents.decode('utf-8')
+        # Porlet manager da esquerda deve estar oculto
+        self.assertNotIn(u'id="portal-column-one"', contents)
+
     def test_microsite_expired_manager_access(self):
         microsite = self.microsite
         with api.env.adopt_roles(['Manager', ]):
@@ -98,7 +126,7 @@ class TraversalTestCase(unittest.TestCase):
             microsite.reindexObject()
             transaction.commit()
         browser = self.browser
-        browser.addHeader('Authorization', 'Basic %s:%s' % (TEST_USER_NAME, TEST_USER_PASSWORD,))
+        browser.addHeader('Authorization', 'Basic %s:%s' % (SITE_OWNER_NAME, SITE_OWNER_PASSWORD,))
         browser.open('{0}'.format(microsite.absolute_url()))
         self.assertEqual(browser.headers['status'], '200 Ok')
         self.assertEqual(browser.url, microsite.absolute_url())
