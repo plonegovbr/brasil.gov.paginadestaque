@@ -1,0 +1,13 @@
+<div id="logo">
+    <a metal:define-macro="portal_logo"
+       id="portal-logo"
+       title="Home"
+       tal:attributes="href view/navigation_root_url;
+                       title view/description">
+            <span id="portal-title-1"
+                  tal:content="view/title_1">Portal Brasil</span>
+            <h1 id="portal-title"
+                  tal:attributes="class view/title_2_class"
+                  tal:content="view/title_2">7 de Setembro</h1>
+    </a>
+</div>

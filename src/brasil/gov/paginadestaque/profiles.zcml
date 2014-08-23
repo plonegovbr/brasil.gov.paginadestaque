@@ -1,0 +1,36 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="brasil.gov.paginadestaque">
+
+  <!-- Profiles -->
+  <genericsetup:registerProfile
+      name="default"
+      title=".gov.br: Página Destaque"
+      directory="profiles/default"
+      description="Complemento para a criação de campanhas e hotsites dentro de um Portal Padrão."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      i18n:attributes="title; description"
+      />
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title=".gov.br: Página Destaque (Remoção)"
+      directory="profiles/uninstall"
+      description="Remove o complemento"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      i18n:attributes="title; description"
+      />
+
+  <!-- Upgrades -->
+  <include package=".upgrades" />
+
+  <!-- Oculta profile -->
+  <utility
+      factory=".config.HiddenProfiles"
+      name="brasil.gov.paginadestaque"
+      />
+
+</configure>

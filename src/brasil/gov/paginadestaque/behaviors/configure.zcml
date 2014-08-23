@@ -1,0 +1,25 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="brasil.gov.paginadestaque">
+
+    <include package="plone.behavior" file="meta.zcml"/>
+
+    <plone:behavior
+        title="Pagina Destaque"
+        description="Adds title_1, title_2, description and links fields."
+        provides=".metadata.IPaginaDestaque"
+        factory=".metadata.PaginaDestaque"
+        for="sc.microsite.interfaces.IMicrosite"
+        />
+
+    <plone:behavior
+        title="Smart expiration"
+        description="Expires and redirect"
+        provides=".expiration.ISmartExpiration"
+        factory=".expiration.SmartExpiration"
+        for="sc.microsite.interfaces.IMicrosite"
+        />
+
+</configure>

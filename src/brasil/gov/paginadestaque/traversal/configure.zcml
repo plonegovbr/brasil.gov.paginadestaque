@@ -1,0 +1,15 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="brasil.gov.paginadestaque">
+
+    <subscriber
+        for="plone.app.layout.navigation.interfaces.INavigationRoot
+             zope.traversing.interfaces.IBeforeTraverseEvent"
+        handler=".hooks.process_microsite"
+     />
+
+	<subscriber handler=".hooks.microsite_expiration_enforcer" />
+
+</configure>
