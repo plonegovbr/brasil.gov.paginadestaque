@@ -1,0 +1,19 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="brasil.gov.paginadestaque">
+
+  <plone:tile
+      name="spacer"
+      title="Spacer Tile"
+      description="A tile to leave some free vertical space and deal with lack of accessibility of background images."
+      icon="++resource++collective.cover/tile-generic.png"
+      add_permission="cmf.ModifyPortalContent"
+      schema=".spacer.ISpacerTile"
+      class=".spacer.SpacerTile"
+      permission="zope2.View"
+      for="*"
+      />
+
+</configure>

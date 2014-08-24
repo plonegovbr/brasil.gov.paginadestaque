@@ -1,0 +1,26 @@
+<html
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:metal="http://xml.zope.org/namespaces/metal"
+    xmlns:tal="http://xml.zope.org/namespaces/tal"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="brasil.gov.paginadestaque"
+    >
+<body tal:define="is_compose_mode nocall:view/is_compose_mode;
+                  title view/Title;
+                  style string:height: ${view/height}px">
+  <div style="height: 400px"
+       tal:condition="is_compose_mode"
+       tal:attributes="style style">
+    <p tal:condition="python:not title" i18n:translate="">
+        Remember to add a text describing the background image for accessibility reasons.
+    </p>
+    <p class="discreet" tal:condition="title" tal:content="title" />
+  </div>
+
+  <div class="spacer-tile tile-content" style="height: 400px"
+       tal:condition='not:is_compose_mode'
+       tal:attributes="style style">
+    <p class="hiddenStructure" tal:condition='title' tal:content="title" />
+  </div>
+</body>
+</html>
