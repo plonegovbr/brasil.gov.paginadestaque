@@ -1,0 +1,121 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-08-24 03:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: brasil/gov/paginadestaque/behaviors/interfaces.py:14
+msgid "Background image"
+msgstr ""
+
+#: brasil/gov/paginadestaque/behaviors/metadata.py:49
+msgid "Footer links"
+msgstr ""
+
+#: brasil/gov/paginadestaque/tiles/spacer.py:15
+msgid "Height"
+msgstr ""
+
+#: brasil/gov/paginadestaque/tiles/spacer.py:16
+msgid "Height of the tile, in pixels."
+msgstr ""
+
+#: brasil/gov/paginadestaque/behaviors/metadata.py:50
+msgid "Link"
+msgstr ""
+
+#: brasil/gov/paginadestaque/profiles/default/types/sc.microsite.xml
+msgid "Microsite para uma campanha"
+msgstr ""
+
+#: brasil/gov/paginadestaque/profiles/default/types/sc.microsite.xml
+msgid "Pagina Destaque"
+msgstr ""
+
+#: brasil/gov/paginadestaque/tiles/spacer.pt:14
+msgid "Remember to add a text describing the background image for accessibility reasons."
+msgstr ""
+
+#: brasil/gov/paginadestaque/behaviors/interfaces.py:15
+msgid "Sets the background image to be used on the item. For accessibility reasons, you should not use background images as the sole method of conveying important information."
+msgstr ""
+
+#: brasil/gov/paginadestaque/tiles/spacer.py:23
+msgid "Text used to describe the background image. For accessibility reasons, you should not use background images as the sole method of conveying important information."
+msgstr ""
+
+#: brasil/gov/paginadestaque/tiles/spacer.py:22
+msgid "Title"
+msgstr ""
+
+#: brasil/gov/paginadestaque/behaviors/metadata.py:18
+msgid "Title 1"
+msgstr ""
+
+#: brasil/gov/paginadestaque/behaviors/metadata.py:19
+msgid "Title 2"
+msgstr ""
+
+#: brasil/gov/paginadestaque/behaviors/metadata.py:20
+msgid "URL"
+msgstr ""
+
+#: brasil/gov/paginadestaque/behaviors/expiration.py:37
+msgid "URL nao valida."
+msgstr ""
+
+#. Default: "Used in item listings and search results."
+#: brasil/gov/paginadestaque/behaviors/metadata.py:39
+msgid "help_description"
+msgstr ""
+
+#. Default: "When this date is reached, the content will no longer be visible in listings and searches."
+#: brasil/gov/paginadestaque/behaviors/expiration.py:47
+msgid "help_expiration_date"
+msgstr ""
+
+#. Default: "After expiration, requests will be redirected to the url filled in here."
+#: brasil/gov/paginadestaque/behaviors/expiration.py:56
+msgid "help_expires_redirect"
+msgstr ""
+
+#. Default: "Summary"
+#: brasil/gov/paginadestaque/behaviors/metadata.py:38
+msgid "label_description"
+msgstr ""
+
+#. Default: "Expiration Date"
+#: brasil/gov/paginadestaque/behaviors/expiration.py:45
+msgid "label_expiration_date"
+msgstr ""
+
+#. Default: "Redirect to"
+#: brasil/gov/paginadestaque/behaviors/expiration.py:55
+msgid "label_expires_redirect"
+msgstr ""
+
+#. Default: "Title 1"
+#: brasil/gov/paginadestaque/behaviors/metadata.py:28
+msgid "label_title_1"
+msgstr ""
+
+#. Default: "Title 2"
+#: brasil/gov/paginadestaque/behaviors/metadata.py:33
+msgid "label_title_2"
+msgstr ""
+
+#. Default: "Spacer"
+#: brasil/gov/paginadestaque/tiles/spacer.py:41
+msgid "msg_short_name_file"
+msgstr ""
+

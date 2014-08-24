@@ -6,6 +6,7 @@
     i18n_domain="brasil.gov.paginadestaque">
 
   <five:registerPackage package="." />
+  <i18n:registerTranslations directory="locales" />
 
   <include package="sc.microsite" />
   <include package="collective.cover" />
