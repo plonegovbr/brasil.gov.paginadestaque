@@ -1,6 +1,7 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="brasil.gov.paginadestaque">
 
   <!-- Viewlets -->
@@ -17,21 +18,12 @@
       manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
       class="plone.app.layout.viewlets.common.SearchBoxViewlet"
       permission="zope2.View"
-      template="templates/searchbox.pt"
+      template="templates/empty.pt"
       layer="brasil.gov.paginadestaque.interfaces.IPaginaDestaque"
       />
 
-<!--
-  <browser:viewlet
-      name="doormat.footer"
-      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-      class=".footer.FooterViewlet"
-      permission="zope2.View"
-      template="templates/footer.pt"
-      layer="brasil.gov.paginadestaque.interfaces.IPaginaDestaque"
-      />
--->
-
+<configure zcml:condition="not-installed brasil.gov.portal">
+  <!-- Sobreescrevemos os viewlets do Plone -->
   <browser:viewlet
       name="plone.footer"
       manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
@@ -40,5 +32,36 @@
       template="templates/footer.pt"
       layer="brasil.gov.paginadestaque.interfaces.IPaginaDestaque"
       />
+</configure>
+
+
+<configure zcml:condition="installed brasil.gov.portal">
+  <!-- Sobreescrevemos os viewlets do Portal Padrao -->
+  <browser:viewlet
+      name="brasil.gov.portal.servicos"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      class="plone.app.layout.viewlets.common.GlobalSectionsViewlet"
+      permission="zope2.View"
+      layer="brasil.gov.paginadestaque.interfaces.IPaginaDestaque"
+      />
+
+  <browser:viewlet
+      name="doormat.footer"
+      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+      class=".footer.FooterViewlet"
+      permission="zope2.View"
+      template="templates/footer.pt"
+      layer="brasil.gov.paginadestaque.interfaces.IPaginaDestaque"
+      />
+
+  <browser:viewlet
+      name="brasil.gov.portal.redessociais"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      template="templates/empty.pt"
+      permission="zope2.View"
+      layer="brasil.gov.paginadestaque.interfaces.IPaginaDestaque"
+      />
+
+</configure>
 
 </configure>
