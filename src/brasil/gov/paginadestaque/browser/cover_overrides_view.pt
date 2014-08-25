@@ -18,6 +18,9 @@
     <div tal:define="layout nocall:context/@@layout"
          tal:replace="structure layout/render_view" />
     <div class="visualClear"><!-- --></div>
+    <script tal:condition="view/background">
+        $("#content").addClass("cover-background-image");
+    </script>
 </metal:main>
 </body>
 </html>
