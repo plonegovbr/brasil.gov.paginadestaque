@@ -45,7 +45,7 @@ class TestInstall(BaseTestCase):
                          'Tema para Página de Destaque do Portal Padrão')
         self.assertEqual(theme.rules, '/++theme++destaques-cinza/rules.xml')
         self.assertEqual(theme.absolutePrefix, '/++theme++destaques-cinza')
-        self.assertEqual(theme.doctype, "<!DOCTYPE html>")
+        self.assertEqual(theme.doctype, '<!DOCTYPE html>')
 
     def test_background_image_behavior_enabled(self):
         fti = queryUtility(IDexterityFTI, name='collective.cover.content')

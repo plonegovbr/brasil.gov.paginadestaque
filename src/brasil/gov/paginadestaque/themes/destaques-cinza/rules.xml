@@ -35,7 +35,7 @@
         <merge attributes="class" css:content="body" css:theme="body" />
         <copy attributes="id dir" css:content="body" css:theme="body" />
         <prepend css:content="#portal-features" css:theme="#main" />
-	    <copy attributes="role" css:content="content" css:theme="contentspace" />
+        <copy attributes="role" css:content="content" css:theme="contentspace" />
         <replace css:content="#portal-column-one" css:theme="#portal-column-one" />
         <replace css:content="#viewlet-above-content" css:theme="#viewlet-above-content" />
         <replace content="//*[@id='portal-column-content']/div[2]" theme="//*[@id='portal-column-content']/div[1]" />
