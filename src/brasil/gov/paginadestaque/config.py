@@ -1,12 +1,21 @@
 # -*- coding: utf-8 -*-
-from Products.CMFPlone.interfaces import INonInstallable
+from Products.CMFPlone import interfaces as st_interfaces
+from Products.CMFQuickInstallerTool import interfaces as qi_interfaces
 from zope.interface import implements
 
 PROJECTNAME = 'brasil.gov.paginadestaque'
 
 
 class HiddenProfiles(object):
-    implements(INonInstallable)
+    implements(qi_interfaces.INonInstallable)
+
+    def getNonInstallableProducts(self):
+        return [
+            u'sc.microsite',
+        ]
+
+class HiddenProfiles(object):
+    implements(st_interfaces.INonInstallable)
 
     def getNonInstallableProfiles(self):
         return [

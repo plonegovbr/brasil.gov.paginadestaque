@@ -27,10 +27,11 @@
   <!-- Upgrades -->
   <include package=".upgrades" />
 
-  <!-- Oculta profile -->
-  <utility
-      factory=".config.HiddenProfiles"
-      name="brasil.gov.paginadestaque"
-      />
+  <!-- Oculta profiles -->
+  <utility factory=".config.HiddenProfiles" name="brasil.gov.paginadestaque" />
+
+  <!-- Oculta pacotes -->
+  <utility factory=".config.HiddenProducts" name="brasil.gov.paginadestaque" />
+
 
 </configure>
