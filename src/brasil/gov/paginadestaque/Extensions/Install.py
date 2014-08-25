@@ -20,11 +20,17 @@ def disable_background_image_behavior():
         logger.info('IBackgroundImage disabled from collective.cover')
 
 
-def remove_tiles():
+def remove_tile_from_registry():
     """Remove tiles manually as registry uninstall profile is not working."""
+    logger.info('Removing references to spacer tile from registry')
+
     tiles = api.portal.get_registry_record('plone.app.tiles')
     if u'spacer' in tiles:
-        logger.info('tiles still present on registry; applying nuke option')
+        tiles.remove(u'spacer')
+
+    record = 'collective.cover.controlpanel.ICoverSettings.available_tiles'
+    tiles = api.portal.get_registry_record(record)
+    if u'spacer' in tiles:
         tiles.remove(u'spacer')
 
 
@@ -35,6 +41,6 @@ def uninstall(portal, reinstall=False):
         setup_tool.runAllImportStepsFromProfile(profile)
 
         disable_background_image_behavior()
-        remove_tiles()  # HACK: nuke option
+        remove_tile_from_registry()
 
         return 'Ran all uninstall steps.'

@@ -39,11 +39,11 @@ class TestInstall(BaseTestCase):
         fti = queryUtility(IDexterityFTI, name='collective.cover.content')
         self.assertIn(IBackgroundImage.__identifier__, fti.behaviors)
 
-    def test_tiles_installed(self):
+    def test_tile_installed(self):
         tiles = api.portal.get_registry_record('plone.app.tiles')
         self.assertIn(u'spacer', tiles)
 
-    def test_tiles_enabled(self):
+    def test_tile_enabled(self):
         record = 'collective.cover.controlpanel.ICoverSettings.available_tiles'
         available_tiles = api.portal.get_registry_record(record)
         self.assertIn(u'spacer', available_tiles)
@@ -73,6 +73,11 @@ class TestUninstall(BaseTestCase):
         fti = queryUtility(IDexterityFTI, name='collective.cover.content')
         self.assertNotIn(IBackgroundImage.__identifier__, fti.behaviors)
 
-    def test_tiles_removed(self):
+    def test_tile_removed(self):
         tiles = api.portal.get_registry_record('plone.app.tiles')
         self.assertNotIn(u'spacer', tiles)
+
+    def test_tile_disabled(self):
+        record = 'collective.cover.controlpanel.ICoverSettings.available_tiles'
+        available_tiles = api.portal.get_registry_record(record)
+        self.assertNotIn(u'spacer', available_tiles)
