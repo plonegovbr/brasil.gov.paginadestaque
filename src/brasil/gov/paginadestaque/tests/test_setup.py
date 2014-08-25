@@ -4,6 +4,7 @@ from brasil.gov.paginadestaque.config import PROJECTNAME
 from brasil.gov.paginadestaque.interfaces import IBrowserLayer
 from brasil.gov.paginadestaque.testing import INTEGRATION_TESTING
 from plone import api
+from plone.app.theming.utils import getTheme
 from plone.browserlayer.utils import registered_layers
 from plone.dexterity.interfaces import IDexterityFTI
 from zope.component import queryUtility
@@ -35,11 +36,22 @@ class TestInstall(BaseTestCase):
     def test_browser_layer_installed(self):
         self.assertIn(IBrowserLayer, registered_layers())
 
+    def test_diazo_theme_installed(self):
+        theme = getTheme('destaques-cinza')
+        self.assertTrue(theme is not None)
+        self.assertEqual(theme.__name__, 'destaques-cinza')
+        self.assertEqual(theme.title, 'Página Destaque - Tema Cinza')
+        self.assertEqual(theme.description,
+                         'Tema para Página de Destaque do Portal Padrão')
+        self.assertEqual(theme.rules, '/++theme++destaques-cinza/rules.xml')
+        self.assertEqual(theme.absolutePrefix, '/++theme++destaques-cinza')
+        self.assertEqual(theme.doctype, "<!DOCTYPE html>")
+
     def test_background_image_behavior_enabled(self):
         fti = queryUtility(IDexterityFTI, name='collective.cover.content')
         self.assertIn(IBackgroundImage.__identifier__, fti.behaviors)
 
-    def test_tile_installed(self):
+    def test_tiles_installed(self):
         tiles = api.portal.get_registry_record('plone.app.tiles')
         self.assertIn(u'spacer', tiles)
 
