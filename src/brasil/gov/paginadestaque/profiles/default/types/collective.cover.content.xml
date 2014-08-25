@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<object name="collective.cover.content">
+  <property name="behaviors" purge="False">
+    <element value="brasil.gov.paginadestaque.behaviors.interfaces.IBackgroundImage" />
+  </property>
+</object>

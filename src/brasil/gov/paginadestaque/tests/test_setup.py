@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
+from brasil.gov.paginadestaque.behaviors.interfaces import IBackgroundImage
 from brasil.gov.paginadestaque.config import PROJECTNAME
 from brasil.gov.paginadestaque.interfaces import IBrowserLayer
 from brasil.gov.paginadestaque.testing import INTEGRATION_TESTING
 from plone import api
 from plone.browserlayer.utils import registered_layers
+from plone.dexterity.interfaces import IDexterityFTI
+from zope.component import queryUtility
 
 import unittest
 
@@ -31,6 +34,10 @@ class TestInstall(BaseTestCase):
 
     def test_browser_layer_installed(self):
         self.assertIn(IBrowserLayer, registered_layers())
+
+    def test_background_image_behavior_enabled(self):
+        fti = queryUtility(IDexterityFTI, name='collective.cover.content')
+        self.assertIn(IBackgroundImage.__identifier__, fti.behaviors)
 
     def test_tiles_installed(self):
         tiles = api.portal.get_registry_record('plone.app.tiles')
@@ -61,6 +68,10 @@ class TestUninstall(BaseTestCase):
 
     def test_browser_layer_removed(self):
         self.assertNotIn(IBrowserLayer, registered_layers())
+
+    def test_background_image_behavior_disabled(self):
+        fti = queryUtility(IDexterityFTI, name='collective.cover.content')
+        self.assertNotIn(IBackgroundImage.__identifier__, fti.behaviors)
 
     def test_tiles_removed(self):
         tiles = api.portal.get_registry_record('plone.app.tiles')
