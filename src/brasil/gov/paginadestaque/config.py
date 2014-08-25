@@ -6,13 +6,14 @@ from zope.interface import implements
 PROJECTNAME = 'brasil.gov.paginadestaque'
 
 
-class HiddenProfiles(object):
+class HiddenProducts(object):
     implements(qi_interfaces.INonInstallable)
 
     def getNonInstallableProducts(self):
         return [
             u'sc.microsite',
         ]
+
 
 class HiddenProfiles(object):
     implements(st_interfaces.INonInstallable)
