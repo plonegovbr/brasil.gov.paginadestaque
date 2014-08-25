@@ -36,6 +36,11 @@ class TestInstall(BaseTestCase):
         tiles = api.portal.get_registry_record('plone.app.tiles')
         self.assertIn(u'spacer', tiles)
 
+    def test_tiles_enabled(self):
+        record = 'collective.cover.controlpanel.ICoverSettings.available_tiles'
+        available_tiles = api.portal.get_registry_record(record)
+        self.assertIn(u'spacer', available_tiles)
+
     def test_version(self):
         self.assertEqual(
             self.st.getLastVersionForProfile(self.profile),

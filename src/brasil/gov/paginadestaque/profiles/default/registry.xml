@@ -5,4 +5,12 @@
       <element>spacer</element>
     </value>
   </record>
+
+  <record field="available_tiles"
+          interface="collective.cover.controlpanel.ICoverSettings"
+          name="collective.cover.controlpanel.ICoverSettings.available_tiles">
+    <value purge="false">
+      <element>spacer</element>
+    </value>
+  </record>
 </registry>
