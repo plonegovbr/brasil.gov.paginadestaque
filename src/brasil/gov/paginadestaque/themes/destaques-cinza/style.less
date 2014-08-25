@@ -1,0 +1,175 @@
+// Tema Cinza para o Página de Destaque
+
+// VARIAVEIS ####################################################################
+// Altere as cores principais para criar um novo tema
+
+// Basic Colors
+@main-bg: #fff;
+@main-text: #111111;
+@main-color: #f2f2f2;
+
+// Header
+@header: @main-color;
+@header2: darken(@header, 10%);
+@header-text: #2d66cf;
+@header-link: @header-text;
+.header-border {border-top: 2px solid #dfdfdf;}
+
+// Navegacao
+@nav: #d5d6d8;
+@nav-link: @header-text;
+.nav-border {border-right:1px solid #98999b;}
+
+// Footer
+@footer: #0042b2;
+
+// colunas
+@main-width: 960px;
+@max-width: 100%;
+@coluna1: 20%;
+@coluna2: 30%;
+
+// Aditional styles
+.gradient {
+	background: -webkit-linear-gradient(@header, @header2); /* For Safari */
+	background: -o-linear-gradient(@header, @header2); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(@header, @header2); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(@header, @header2); /* Standard syntax (must be last) */
+}
+.gradient-nav {
+	background: -webkit-linear-gradient(@nav, darken(@nav, 10%)); /* For Safari */
+	background: -o-linear-gradient(@nav, darken(@nav, 10%)); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(@nav, darken(@nav, 10%)); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(@nav, darken(@nav, 10%)); /* Standard syntax (must be last) */
+}
+.wrapper-size {
+	margin: 0 auto;
+	width: @main-width;
+	max-width: @max-width;
+}
+
+// ESTILOS ####################################################################
+// Não é necessário alterar apartir desta linha
+
+// Basic styles
+body {
+  background-color: @main-bg;
+  color: @main-text;
+}
+#header {
+  color: @header-text;
+  padding: 14px 0 0 0;
+  .header-border;
+  .gradient;
+}
+#accessibility {
+  font-size: 0.78em;
+}
+#accessibility a {
+  color: @header-link;
+}
+#accessibility a span {
+  background: lighten(@header-text, 10%);
+  color: @header;
+}
+#portal-siteactions {
+  border-bottom: 1px dotted @header-text;
+}
+#portal-siteactions a,
+#portal-siteactions a:hover,
+#portal-language a,
+#portal-language a:hover { color: @header-text !important; }
+#header h1,
+#header a {
+  color: @header-link;
+}
+#portal-title {
+  margin-bottom: 25px;
+}
+nav {
+  .gradient-nav
+}
+
+nav ul {
+  line-height: 20px;
+  padding: 5px 0;
+  .wrapper-size;
+}
+nav li {
+  margin-right: 10px;
+  padding-right: 10px;
+  .nav-border;
+}
+
+#main {
+  .wrapper-size;
+  background: @main-bg;
+}
+
+.ministerios {
+  background: @header;
+}
+.ministerios ul {
+  margin: 0 auto;
+  max-width: @main-width;
+  width: @max-width;
+}
+.ministerios li {
+  width: 29%;
+  float: left;
+  margin: 2%;
+  text-align: center;
+}
+.ministerios a {
+  color: @footer;
+}
+.ministerios a span:last-child {
+  display: block;
+  font-weight: bold;
+}
+#footer .footer-logos {
+  background: @footer;
+}
+
+/* icones de redes sociais */
+#social-icons a,
+/* central de conteudo */
+.item-central .link-videos,
+.item-central .link-audios,
+.item-central .link-infograficos,
+.item-central .link-publicacoes,
+.item-central .link-fotos,
+.item-central .link-aplicativos,
+/* icone do botão de busca */
+#header input.searchButton { background-image: url("/img/sprite.png"); }
+/* icone do botão de relatar erros */
+#content .relatar-erros a { background: url("/img/icon-reportar-erros.png") no-repeat; }
+
+/* Summary view */
+#content .summary-view-icon [class*="icon"] {
+    background-image: url("/img/summary-view-icons-sprite.png");
+}
+
+/* Responsivo */
+@media only screen and (min-width : 320px) and (max-width : 768px) {
+
+    .menuTrigger {
+        background: #dbdce1 url("/img/bg-menu-mobile.png") top right no-repeat;
+    }
+
+    .portlet-static-centrais-de-conteudos .portletHeader,
+    .portletNavigationTree .portletHeader {
+        background: #edeff1 url("/img/portlet-header.gif") no-repeat 96% center;
+    }
+
+    .portletNavigationTree .portletHeader.ativo {
+        background: url("/img/portlet-header-expanded.gif") no-repeat 96% center;
+    }
+
+}
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  #header #portal-searchbox .searchButton {
+    background: url("/img/search-button-30px.png") no-repeat;
+  }
+}

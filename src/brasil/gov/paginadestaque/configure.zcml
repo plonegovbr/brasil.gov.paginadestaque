@@ -20,4 +20,7 @@
   <!-- Suporte ao Generic Setup-->
   <include file="profiles.zcml" />
 
+  <!-- Temas Diazo -->
+  <include file="themes.zcml" />
+
 </configure>

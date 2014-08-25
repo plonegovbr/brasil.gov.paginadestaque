@@ -1,0 +1,14 @@
+<configure
+	xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns="http://namespaces.zope.org/zope">
+
+  <include package="plone.resource" />
+
+  <!-- Tema -->
+  <plone:static
+      type="theme"
+      name="destaques-cinza"
+      directory="themes/destaques-cinza"
+      />
+
+</configure>
