@@ -21,7 +21,7 @@ msgstr "Imagem de fundo"
 
 #: brasil/gov/paginadestaque/behaviors/metadata.py:49
 msgid "Footer links"
-msgstr ""
+msgstr "Links de rodapé"
 
 #: brasil/gov/paginadestaque/tiles/spacer.py:15
 msgid "Height"
@@ -33,15 +33,15 @@ msgstr "Altura do tile, em píxels."
 
 #: brasil/gov/paginadestaque/behaviors/metadata.py:50
 msgid "Link"
-msgstr ""
+msgstr "Link"
 
 #: brasil/gov/paginadestaque/profiles/default/types/sc.microsite.xml
 msgid "Microsite para uma campanha"
-msgstr ""
+msgstr "Microsite para uma campanha"
 
 #: brasil/gov/paginadestaque/profiles/default/types/sc.microsite.xml
 msgid "Pagina Destaque"
-msgstr ""
+msgstr "Página Destaque"
 
 #: brasil/gov/paginadestaque/tiles/spacer.pt:14
 msgid ""
@@ -77,59 +77,59 @@ msgstr "Título"
 
 #: brasil/gov/paginadestaque/behaviors/metadata.py:18
 msgid "Title 1"
-msgstr ""
+msgstr "Título (linha 1)"
 
 #: brasil/gov/paginadestaque/behaviors/metadata.py:19
 msgid "Title 2"
-msgstr ""
+msgstr "Título (linha 2)"
 
 #: brasil/gov/paginadestaque/behaviors/metadata.py:20
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: brasil/gov/paginadestaque/behaviors/expiration.py:37
 msgid "URL nao valida."
-msgstr ""
+msgstr "URL não válida"
 
 #. Default: "Used in item listings and search results."
 #: brasil/gov/paginadestaque/behaviors/metadata.py:39
 msgid "help_description"
-msgstr ""
+msgstr "Utilizado em listagens e resultados de busca."
 
 #. Default: "When this date is reached, the content will no longer be visible in listings and searches."
 #: brasil/gov/paginadestaque/behaviors/expiration.py:47
 msgid "help_expiration_date"
-msgstr ""
+msgstr "Quando esta data for ultrapassada este conteúdo -- e todos os conteúdos abaixo dele -- serão redirecionados para a url informada no campo Redirecionamento pós-expiração"
 
 #. Default: "After expiration, requests will be redirected to the url filled in here."
 #: brasil/gov/paginadestaque/behaviors/expiration.py:56
 msgid "help_expires_redirect"
-msgstr ""
+msgstr "Após sua expiracão todas as requisições para este conteúdo serão redirecionadas para a url preenchida aqui."
 
 #. Default: "Summary"
 #: brasil/gov/paginadestaque/behaviors/metadata.py:38
 msgid "label_description"
-msgstr ""
+msgstr "Descrição"
 
 #. Default: "Expiration Date"
 #: brasil/gov/paginadestaque/behaviors/expiration.py:45
 msgid "label_expiration_date"
-msgstr ""
+msgstr "Data de expiração"
 
 #. Default: "Redirect to"
 #: brasil/gov/paginadestaque/behaviors/expiration.py:55
 msgid "label_expires_redirect"
-msgstr ""
+msgstr "Redirecionamento pós-expiração"
 
 #. Default: "Title 1"
 #: brasil/gov/paginadestaque/behaviors/metadata.py:28
 msgid "label_title_1"
-msgstr ""
+msgstr "Título (linha 1)"
 
 #. Default: "Title 2"
 #: brasil/gov/paginadestaque/behaviors/metadata.py:33
 msgid "label_title_2"
-msgstr ""
+msgstr "Título (linha 2)"
 
 #. Default: "Spacer"
 #: brasil/gov/paginadestaque/tiles/spacer.py:41
