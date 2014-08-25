@@ -45,7 +45,7 @@ setup(
         'plone.app.upgrade',
         'Products.CMFPlone >=4.3',
         'Products.GenericSetup',
-        'sc.microsite',
+        'sc.microsite >=1.0b3',
         'setuptools',
         'zope.i18nmessageid',
         'zope.interface',
