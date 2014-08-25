@@ -130,6 +130,11 @@ div.width-full {
 #footer .footer-logos {
   background: #0042b2;
 }
+/* tiles */
+.cover-background-image .cover-richtext-tile {
+  background: #ffffff;
+  outline: 10px solid #ffffff;
+}
 /* icones de redes sociais */
 #social-icons a,
 .item-central .link-videos,
