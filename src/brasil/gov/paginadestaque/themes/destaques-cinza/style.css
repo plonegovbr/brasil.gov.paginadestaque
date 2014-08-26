@@ -67,7 +67,11 @@ body {
 }
 #header h1,
 #header a {
-  color: #2d66cf;
+  color: #2d66cf !important;
+}
+#logo a,
+#logo #portal-title {
+  color: #2d66cf !important;
 }
 #portal-title {
   margin-bottom: 25px;
