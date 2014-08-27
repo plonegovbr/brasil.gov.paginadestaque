@@ -92,6 +92,23 @@ body {
 nav {
   .gradient-nav
 }
+#portal-globalnav {
+  clear: both;
+  font-size: 1em;
+  background: transparent;
+  margin: auto;
+}
+#portal-globalnav li a {
+  display: inline;
+  padding: 0;
+  background: transparent;
+  border-right: 0;
+}
+#portal-globalnav .selected a,
+#portal-globalnav a:hover,
+#portal-globalnav .selected a:hover {
+    background: transparent;
+}
 nav ul {
   line-height: 20px;
   padding: 5px 0;
@@ -166,11 +183,11 @@ width: 100%;
 }
 
 /* Contraste */
-nav,
-nav ul,
-.ministerios,
-.cover-background-image .cover-richtext-tile,
-.cover-background-image {
+.contraste nav,
+.contraste nav ul,
+.contraste .ministerios,
+.contraste .cover-background-image .cover-richtext-tile,
+.contraste .cover-background-image {
     background: none repeat scroll 0 0 #000 !important;
     color: #fff !important;
 }
