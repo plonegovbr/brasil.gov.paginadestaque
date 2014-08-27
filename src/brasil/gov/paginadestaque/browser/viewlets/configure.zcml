@@ -22,6 +22,14 @@
       layer="brasil.gov.paginadestaque.interfaces.IPaginaDestaque"
       />
 
+  <browser:viewlet
+      name="plone.site_actions"
+      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+      class=".common.SiteActionsViewlet"
+      permission="zope2.View"
+      layer="brasil.gov.paginadestaque.interfaces.IPaginaDestaque"
+      />
+
 <configure zcml:condition="not-installed brasil.gov.portal">
   <!-- Sobreescrevemos os viewlets do Plone -->
   <browser:viewlet
@@ -40,7 +48,7 @@
   <browser:viewlet
       name="brasil.gov.portal.servicos"
       manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-      class="plone.app.layout.viewlets.common.GlobalSectionsViewlet"
+      class=".common.GlobalSectionsViewlet"
       permission="zope2.View"
       layer="brasil.gov.paginadestaque.interfaces.IPaginaDestaque"
       />
