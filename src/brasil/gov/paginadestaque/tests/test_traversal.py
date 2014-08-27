@@ -146,11 +146,43 @@ class TraversalTestCase(unittest.TestCase):
         # Voltamos para a raiz do portal
         self.assertEqual(browser.url, self.portal.absolute_url())
 
+    def test_microsite_expired_anonymous_access_empty_url(self):
+        microsite = self.microsite
+        with api.env.adopt_roles(['Manager', ]):
+            behavior = ISmartExpiration(microsite)
+            behavior.expires = EXPIRED
+            behavior.expires_redirect = u' '
+            microsite.reindexObject()
+            transaction.commit()
+        browser = self.browser
+        browser.open('{0}'.format(microsite.absolute_url()))
+        self.assertEqual(browser.headers['status'], '200 Ok')
+        # Nao estamos dentro do microsite
+        self.assertNotEqual(browser.url, microsite.absolute_url())
+        # Voltamos para a raiz do portal
+        self.assertEqual(browser.url, self.portal.absolute_url())
+
     def test_microsite_expired_sub_contents(self):
         microsite = self.microsite
         with api.env.adopt_roles(['Manager', ]):
             behavior = ISmartExpiration(microsite)
             behavior.expires = EXPIRED
+            microsite.reindexObject()
+            transaction.commit()
+        browser = self.browser
+        browser.open('{0}'.format(self.page.absolute_url()))
+        self.assertEqual(browser.headers['status'], '200 Ok')
+        # Nao vemos a pagina
+        self.assertNotEqual(browser.url, self.page.absolute_url())
+        # Voltamos para a raiz do portal
+        self.assertEqual(browser.url, self.portal.absolute_url())
+
+    def test_microsite_expired_sub_contents_empty_url(self):
+        microsite = self.microsite
+        with api.env.adopt_roles(['Manager', ]):
+            behavior = ISmartExpiration(microsite)
+            behavior.expires = EXPIRED
+            behavior.expires_redirect = u' '
             microsite.reindexObject()
             transaction.commit()
         browser = self.browser
