@@ -106,6 +106,7 @@ nav {
 nav ul {
   line-height: 20px;
   padding: 5px 0;
+  min-height: 18px;
   margin: 0 auto;
   width: 960px;
   max-width: 100%;
@@ -194,6 +195,10 @@ div.width-full {
   }
   .spacer-tile {
     height: auto !important;
+  }
+  .ministerios li {
+    width: 46%;
+    margin: 2%;
   }
   .menuTrigger {
     background: #dbdce1 url("/img/bg-menu-mobile.png") top right no-repeat;
