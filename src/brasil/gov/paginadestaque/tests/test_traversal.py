@@ -109,6 +109,8 @@ class TraversalTestCase(unittest.TestCase):
         self.assertNotIn(u'input name="SearchableText"', contents)
         # Viewlet de footer
         self.assertIn(u'class="footer_links"', contents)
+        # Viewlet de site_actions **sem** mapa do site
+        self.assertNotIn(u'Mapa do Site</a>', contents)
 
     def test_microsite_left_column_not_available(self):
         browser = self.browser
