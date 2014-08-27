@@ -41,7 +41,7 @@ msgstr "Microsite para uma campanha"
 
 #: brasil/gov/paginadestaque/profiles/default/types/sc.microsite.xml
 msgid "Pagina Destaque"
-msgstr "Página Destaque"
+msgstr "Página de Destaque"
 
 #: brasil/gov/paginadestaque/tiles/spacer.pt:14
 msgid ""
