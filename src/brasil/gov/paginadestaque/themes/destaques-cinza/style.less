@@ -121,7 +121,7 @@ width: 100%;
   width: @max-width;
 }
 .ministerios li {
-  width: 29%;
+  width: 21%;
   float: left;
   margin: 2%;
   text-align: center;
@@ -132,6 +132,9 @@ width: 100%;
 .ministerios a span:last-child {
   display: block;
   font-weight: bold;
+}
+#footer {
+  padding: 0 0 20px 0 !important;
 }
 #footer .footer-logos {
   background: @footer;
@@ -162,8 +165,25 @@ width: 100%;
     background-image: url("/img/summary-view-icons-sprite.png");
 }
 
+/* Contraste */
+nav,
+nav ul,
+.ministerios,
+.cover-background-image .cover-richtext-tile,
+.cover-background-image {
+    background: none repeat scroll 0 0 #000 !important;
+    color: #fff !important;
+}
+
 /* Responsivo */
 @media only screen and (min-width : 320px) and (max-width : 768px) {
+
+    .cover-background-image {
+      background: #fff;
+    }
+    .spacer-tile {
+      height: auto !important;
+    }
 
     .menuTrigger {
         background: #dbdce1 url("/img/bg-menu-mobile.png") top right no-repeat;
