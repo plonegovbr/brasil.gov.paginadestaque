@@ -134,4 +134,4 @@ msgstr "Título (linha 2)"
 #. Default: "Spacer"
 #: brasil/gov/paginadestaque/tiles/spacer.py:41
 msgid "msg_short_name_file"
-msgstr "Spacer"
+msgstr "Espaçador"
