@@ -40,7 +40,7 @@ class TestInstall(BaseTestCase):
         theme = getTheme('destaques-cinza')
         self.assertTrue(theme is not None)
         self.assertEqual(theme.__name__, 'destaques-cinza')
-        self.assertEqual(theme.title, 'Página Destaque - Tema Cinza')
+        self.assertEqual(theme.title, 'Página de Destaque - Tema Cinza')
         self.assertEqual(theme.description,
                          'Tema para Página de Destaque do Portal Padrão')
         self.assertEqual(theme.rules, '/++theme++destaques-cinza/rules.xml')
