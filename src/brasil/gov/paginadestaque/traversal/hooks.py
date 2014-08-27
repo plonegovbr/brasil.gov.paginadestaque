@@ -67,5 +67,6 @@ def microsite_expiration_enforcer(event):
         sm = getSecurityManager()
         if expired and not sm.checkPermission(ModifyPortalContent, object):
             portal = api.portal.get()
-            expires_redirect = getattr(object, 'expires_redirect', portal.absolute_url())
+            expires_redirect = getattr(object, 'expires_redirect', '').strip()
+            expires_redirect = expires_redirect if expires_redirect else portal.absolute_url()
             raise Redirect(expires_redirect)
