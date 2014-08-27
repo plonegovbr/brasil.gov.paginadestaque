@@ -14,7 +14,7 @@ import transaction
 import unittest
 
 
-class TraversalTestCase(unittest.TestCase):
+class AcessibilidadeTestCase(unittest.TestCase):
 
     layer = FUNCTIONAL_TESTING
 
