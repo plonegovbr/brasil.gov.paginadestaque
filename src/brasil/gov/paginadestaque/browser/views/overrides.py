@@ -7,7 +7,7 @@ from collective.cover.content import ICover
 from five import grok
 from plone.memoize import view
 
-grok.templatedir('.')
+grok.templatedir('templates')
 
 
 class CoverOverridesView(CoverBaseView):
