@@ -31,7 +31,7 @@
         <!--Content -->
         <copy attributes="href" css:content="#portal-advanced-search a" css:theme="#link-busca" />
         <replace css:content="#logo" css:theme="#logo" />
-        <replace css:content="#portal-globalnav" css:theme="nav ul" />
+        <replace css:content="#portal-globalnav li" css:theme="nav li" />
         <merge attributes="class" css:content="body" css:theme="body" />
         <copy attributes="id dir" css:content="body" css:theme="body" />
         <prepend css:content="#portal-features" css:theme="#main" />
