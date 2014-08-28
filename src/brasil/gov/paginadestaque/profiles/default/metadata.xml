@@ -2,9 +2,7 @@
 <metadata>
   <version>1000</version>
   <dependencies>
-    <dependency>profile-plone.app.theming:default</dependency>
     <dependency>profile-sc.microsite:default</dependency>
-    <dependency>profile-collective.cover:default</dependency>
     <dependency>profile-collective.z3cform.datagridfield:default</dependency>
   </dependencies>
 </metadata>

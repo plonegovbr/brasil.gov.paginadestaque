@@ -18,6 +18,10 @@ class Fixture(PloneSandboxLayer):
 
     def setUpPloneSite(self, portal):
         self.applyProfile(
+            portal, 'plone.app.theming:default')
+        self.applyProfile(
+            portal, 'collective.cover:default')
+        self.applyProfile(
             portal, 'brasil.gov.paginadestaque:default')
 
 

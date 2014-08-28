@@ -30,6 +30,14 @@
       layer="brasil.gov.paginadestaque.interfaces.IPaginaDestaque"
       />
 
+  <browser:viewlet
+      name="plone.belowcontenttitle.documentbyline"
+      manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
+      class=".content.DocumentBylineViewlet"
+      permission="zope2.View"
+      layer="brasil.gov.paginadestaque.interfaces.IPaginaDestaque"
+      />
+
 <configure zcml:condition="not-installed brasil.gov.portal">
   <!-- Sobreescrevemos os viewlets do Plone -->
   <browser:viewlet
