@@ -116,6 +116,9 @@ nav li {
   padding-right: 10px;
   border-right: 1px solid #98999b;
 }
+nav li.last-item {
+  border-right: none;
+}
 #main {
   margin: 0 auto;
   width: 960px;
