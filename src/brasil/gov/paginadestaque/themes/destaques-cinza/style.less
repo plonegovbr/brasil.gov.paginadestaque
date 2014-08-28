@@ -29,6 +29,9 @@
 @coluna1: 20%;
 @coluna2: 30%;
 
+// ESTILOS PRE DFINIDOS #########################################################
+// Não é necessário alterar apartir desta linha
+
 // Aditional styles
 .gradient {
 	background: -webkit-linear-gradient(@header, @header2); /* For Safari */
@@ -47,9 +50,6 @@
 	width: @main-width;
 	max-width: @max-width;
 }
-
-// ESTILOS ####################################################################
-// Não é necessário alterar apartir desta linha
 
 // Basic styles
 body {
@@ -128,13 +128,13 @@ nav li.last-item {
   background: @main-bg;
 }
 div.position-0 {
-margin-left: -100%;
+  margin-left: -100%;
 }
 div.width-full {
-width: 100%;
+  width: 100%;
 }
 div.width-16 {
-width: 100%;
+  width: 100%;
 }
 .ministerios {
   background: @header;
@@ -170,25 +170,6 @@ width: 100%;
   outline: 10px solid @main-bg;
 }
 
-/* icones de redes sociais */
-#social-icons a,
-/* central de conteudo */
-.item-central .link-videos,
-.item-central .link-audios,
-.item-central .link-infograficos,
-.item-central .link-publicacoes,
-.item-central .link-fotos,
-.item-central .link-aplicativos,
-/* icone do botão de busca */
-#header input.searchButton { background-image: url("img/sprite.png"); }
-/* icone do botão de relatar erros */
-#content .relatar-erros a { background: url("img/icon-reportar-erros.png") no-repeat; }
-
-/* Summary view */
-#content .summary-view-icon [class*="icon"] {
-    background-image: url("img/summary-view-icons-sprite.png");
-}
-
 /* Contraste */
 .contraste #header a,
 .contraste nav,
@@ -198,7 +179,6 @@ width: 100%;
     background: none repeat scroll 0 0 #000 !important;
     color: #fff !important;
 }
-
 .contraste .spacer-tile .hiddenStructure {
   height: auto;
   overflow: visible;
@@ -208,7 +188,6 @@ width: 100%;
   font-weight: bold;
   font-size: 1.5em;
 }
-
 .contraste .cover-background-image .cover-richtext-tile {
   outline: 10px solid #000;
 }
@@ -229,7 +208,7 @@ width: 100%;
     }
 
     .menuTrigger {
-      background: #dbdce1 url("img/bg-menu-mobile.png") top right no-repeat;
+      background: @header2 url("img/bg-menu-mobile.png") top right no-repeat;
     }
 
     nav ul {
@@ -256,15 +235,6 @@ width: 100%;
       width: auto;
       font-weight: bold;
       font-size: 1.5em;
-    }
-
-    .portlet-static-centrais-de-conteudos .portletHeader,
-    .portletNavigationTree .portletHeader {
-        background: #edeff1 url("img/portlet-header.gif") no-repeat 96% center;
-    }
-
-    .portletNavigationTree .portletHeader.ativo {
-        background: url("img/portlet-header-expanded.gif") no-repeat 96% center;
     }
 
 }

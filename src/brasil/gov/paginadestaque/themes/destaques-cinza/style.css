@@ -166,25 +166,6 @@ div.width-16 {
   background: #ffffff;
   outline: 10px solid #ffffff;
 }
-/* icones de redes sociais */
-#social-icons a,
-.item-central .link-videos,
-.item-central .link-audios,
-.item-central .link-infograficos,
-.item-central .link-publicacoes,
-.item-central .link-fotos,
-.item-central .link-aplicativos,
-#header input.searchButton {
-  background-image: url("img/sprite.png");
-}
-/* icone do botão de relatar erros */
-#content .relatar-erros a {
-  background: url("img/icon-reportar-erros.png") no-repeat;
-}
-/* Summary view */
-#content .summary-view-icon [class*="icon"] {
-  background-image: url("img/summary-view-icons-sprite.png");
-}
 /* Contraste */
 .contraste #header a,
 .contraste nav,
@@ -219,7 +200,7 @@ div.width-16 {
     margin: 2%;
   }
   .menuTrigger {
-    background: #dbdce1 url("img/bg-menu-mobile.png") top right no-repeat;
+    background: #d9d9d9 url("img/bg-menu-mobile.png") top right no-repeat;
   }
   nav ul {
     display: none;
@@ -242,12 +223,5 @@ div.width-16 {
     width: auto;
     font-weight: bold;
     font-size: 1.5em;
-  }
-  .portlet-static-centrais-de-conteudos .portletHeader,
-  .portletNavigationTree .portletHeader {
-    background: #edeff1 url("img/portlet-header.gif") no-repeat 96% center;
-  }
-  .portletNavigationTree .portletHeader.ativo {
-    background: url("img/portlet-header-expanded.gif") no-repeat 96% center;
   }
 }
