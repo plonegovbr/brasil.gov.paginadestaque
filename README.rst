@@ -12,7 +12,7 @@ Complemento para a criação de microsites dentro do Portal Padrão. A instalaç
 um novo tipo de conteúdo chamado PÁGINA DE DESTAQUE, que poderá ser utilizado para a criação de campanhas
 e hotsites dentro do Portal Padrão, com um tema específico para este uso.
 
-Importante: Esté pacote foi desenvolvido para ser utilizado dentro do Portal Padrão, e depende de diversas
+Importante: Este pacote foi desenvolvido para ser utilizado dentro do Portal Padrão, e depende de diversas
 ferramentas disponíveis no Portal. Por isso seu uso isolado não é aconselhado.
 
 Estado deste pacote
