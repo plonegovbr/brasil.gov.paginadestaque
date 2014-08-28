@@ -167,29 +167,58 @@ div.width-16 {
 /* tiles */
 .cover-background-image .cover-richtext-tile {
   background: @main-bg;
-  outline: 10px solid @main-bg;
+  padding: 10px;
+}
+.cover-background-image .laranja .tile-content,
+.cover-background-image .azul-petroleo .tile-content,
+.cover-background-image .dourado .tile-content,
+.cover-background-image .roxo .tile-content,
+.cover-background-image .marrom-claro .tile-content,
+.cover-background-image .verde-escuro .tile-content,
+.cover-background-image .verde .tile-content,
+.cover-background-image .azul .tile-content,
+.cover-background-image .marrom .tile-content,
+.cover-background-image .verde-claro .tile-content,
+.cover-background-image .azul-claro .tile-content,
+.cover-background-image .azul-escuro .tile-content,
+.cover-background-image .azul-turquesa .tile-content,
+.cover-background-image .bege .tile-content {
+    background: @main-bg;
+    padding: 15px 5px;
+    margin-top:  -23px;
+    margin-bottom: -24px;
 }
 
 /* Contraste */
-.contraste #header a,
-.contraste nav,
-.contraste nav ul,
 .contraste .ministerios,
 .contraste .cover-background-image .cover-richtext-tile {
-    background: none repeat scroll 0 0 #000 !important;
-    color: #fff !important;
+  background: #000 !important;
+  color: #fff !important;
 }
-.contraste .spacer-tile .hiddenStructure {
-  height: auto;
-  overflow: visible;
-  padding: 1em;
-  margin: 0;
-  width: auto;
-  font-weight: bold;
-  font-size: 1.5em;
+.contraste #header a {
+  color: #fff !important;
 }
-.contraste .cover-background-image .cover-richtext-tile {
-  outline: 10px solid #000;
+.contraste nav,
+.contraste nav ul,
+.contraste #header nav ul a {
+  background: #333 !important;
+  color: #fff !important;
+}
+.contraste .laranja .tile-content,
+.contraste .azul-petroleo .tile-content,
+.contraste .dourado .tile-content,
+.contraste .roxo .tile-content,
+.contraste .marrom-claro .tile-content,
+.contraste .verde-escuro .tile-content,
+.contraste .verde .tile-content,
+.contraste .azul .tile-content,
+.contraste .marrom .tile-content,
+.contraste .verde-claro .tile-content,
+.contraste .azul-claro .tile-content,
+.contraste .azul-escuro .tile-content,
+.contraste .azul-turquesa .tile-content,
+.contraste .bege .tile-content {
+    background: #000;
 }
 
 /* Responsivo */
@@ -197,6 +226,9 @@ div.width-16 {
 
     .cover-background-image {
       background: @main-bg !important;
+    }
+    .contraste .cover-background-image {
+      background: #000 !important;
     }
     .spacer-tile {
       height: auto !important;
