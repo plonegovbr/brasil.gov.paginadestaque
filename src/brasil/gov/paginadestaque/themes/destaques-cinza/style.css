@@ -180,6 +180,7 @@ div.width-full {
   background-image: url("/img/summary-view-icons-sprite.png");
 }
 /* Contraste */
+#header a,
 .contraste nav,
 .contraste nav ul,
 .contraste .ministerios,
