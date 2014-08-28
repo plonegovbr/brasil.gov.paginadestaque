@@ -180,13 +180,13 @@ width: 100%;
 .item-central .link-fotos,
 .item-central .link-aplicativos,
 /* icone do botão de busca */
-#header input.searchButton { background-image: url("/img/sprite.png"); }
+#header input.searchButton { background-image: url("img/sprite.png"); }
 /* icone do botão de relatar erros */
-#content .relatar-erros a { background: url("/img/icon-reportar-erros.png") no-repeat; }
+#content .relatar-erros a { background: url("img/icon-reportar-erros.png") no-repeat; }
 
 /* Summary view */
 #content .summary-view-icon [class*="icon"] {
-    background-image: url("/img/summary-view-icons-sprite.png");
+    background-image: url("img/summary-view-icons-sprite.png");
 }
 
 /* Contraste */
@@ -204,7 +204,7 @@ width: 100%;
 @media only screen and (min-width : 320px) and (max-width : 768px) {
 
     .cover-background-image {
-      background: #fff;
+      background: @main-bg !important;
     }
     .spacer-tile {
       height: auto !important;
@@ -216,22 +216,42 @@ width: 100%;
     }
 
     .menuTrigger {
-        background: #dbdce1 url("/img/bg-menu-mobile.png") top right no-repeat;
+      background: #dbdce1 url("img/bg-menu-mobile.png") top right no-repeat;
+    }
+
+    nav ul {
+      display: none;
+    }
+
+    nav.ativo ul {
+      display: block;
+    }
+
+    nav ul li {
+      display: block;
+      padding: 1em;
+      font-weight: bold;
+      font-size: 1.5em;
+      border: none;
+    }
+
+    .spacer-tile .hiddenStructure {
+      height: auto;
+      overflow: visible;
+      padding: 1em;
+      margin: 0;
+      width: auto;
+      font-weight: bold;
+      font-size: 1.5em;
     }
 
     .portlet-static-centrais-de-conteudos .portletHeader,
     .portletNavigationTree .portletHeader {
-        background: #edeff1 url("/img/portlet-header.gif") no-repeat 96% center;
+        background: #edeff1 url("img/portlet-header.gif") no-repeat 96% center;
     }
 
     .portletNavigationTree .portletHeader.ativo {
-        background: url("/img/portlet-header-expanded.gif") no-repeat 96% center;
+        background: url("img/portlet-header-expanded.gif") no-repeat 96% center;
     }
 
-}
-
-@media only screen and (min-width : 320px) and (max-width : 480px) {
-  #header #portal-searchbox .searchButton {
-    background: url("/img/search-button-30px.png") no-repeat;
-  }
 }
