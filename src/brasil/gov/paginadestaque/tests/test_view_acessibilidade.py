@@ -64,9 +64,16 @@ class AcessibilidadeTestCase(unittest.TestCase):
         self.browser = Browser(self.layer['app'])
         transaction.commit()
 
+    def test_acessibilidade_document_by_line(self):
+        browser = self.browser
+        browser.open('{0}/acessibilidade'.format(self.microsite.absolute_url()))
+        self.assertEqual(browser.headers['status'], '200 Ok')
+        contents = browser.contents.decode('utf-8')
+        # Nao presente em acessibilidade
+        self.assertNotIn(u'class="documentByLine"', contents)
+
     def test_acessibilidade_title(self):
         browser = self.browser
-        browser.handleErrors = False
         browser.open('{0}/acessibilidade'.format(self.microsite.absolute_url()))
         self.assertEqual(browser.headers['status'], '200 Ok')
         contents = browser.contents.decode('utf-8')
