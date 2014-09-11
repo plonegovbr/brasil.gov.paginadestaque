@@ -4,7 +4,8 @@ Changelog
 1.0a2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Corrige links de 'Ir para Conteúdo' e 'Ir para o Menu' na página de acessibilidade
+  [ericof]
 
 
 1.0a1 (2014-08-28)

@@ -6,6 +6,14 @@
       metal:use-macro="context/main_template/macros/master"
       i18n:domain="brasil.gov.paginadestaque">
 
+<head>
+  <tal:block metal:fill-slot="base">
+      <base href=""
+            tal:define="base_url string:${context/absolute_url}/acessibilidade"
+            tal:attributes="href base_url" /><!--[if lt IE 7]></base><![endif]-->
+  </tal:block>
+</head>
+
 <body>
     <metal:title-core fill-slot="content-title">
       <h1 class="documentFirstHeading" tal:content="view/title">Title</h1>
