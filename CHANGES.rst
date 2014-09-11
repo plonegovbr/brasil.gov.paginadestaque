@@ -1,5 +1,5 @@
-Changelog
-=========
+Alterações
+===========
 
 1.0a2 (unreleased)
 ------------------

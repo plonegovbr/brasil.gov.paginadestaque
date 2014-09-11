@@ -1,5 +1,5 @@
-Contributors
-============
+Contribuidores
+===============
 
 - Érico Andrei
 - Héctor Velarde
