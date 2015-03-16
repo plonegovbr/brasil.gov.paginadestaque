@@ -4,7 +4,8 @@ Alterações
 1.0a3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Ajusta conflito de estilo na barra do governo.
+  [dbarbato]
 
 
 1.0a2 (2014-09-13)

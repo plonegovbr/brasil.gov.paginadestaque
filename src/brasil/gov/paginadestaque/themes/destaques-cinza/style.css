@@ -111,6 +111,10 @@ nav ul {
   width: 960px;
   max-width: 100%;
 }
+#wrapper-barra-brasil ul.list {
+  line-height: 32px !important;
+  width: inherit !important;
+}
 nav li {
   margin-right: 10px;
   padding-right: 10px;
