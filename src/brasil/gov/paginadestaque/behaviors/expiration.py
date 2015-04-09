@@ -1,5 +1,10 @@
 # -*- coding: utf-8 -*-
+
 from brasil.gov.paginadestaque import _
+
+from datetime import datetime
+from datetime import timedelta
+
 from plone.app.dexterity.behaviors.metadata import DCFieldProperty
 from plone.app.dexterity.behaviors.metadata import MetadataBase
 from plone.autoform import directives as form
@@ -8,12 +13,10 @@ from plone.supermodel import model
 from z3c.form.interfaces import IAddForm
 from z3c.form.interfaces import IEditForm
 from zope import schema
+from zope.interface import Invalid
 from zope.interface import alsoProvides
-from datetime import datetime
-from datetime import timedelta
 from zope.interface import provider
 from zope.schema.interfaces import IContextAwareDefaultFactory
-from zope.interface import Invalid
 
 import re
 
