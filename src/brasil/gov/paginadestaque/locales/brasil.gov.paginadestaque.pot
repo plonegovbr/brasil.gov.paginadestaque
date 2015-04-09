@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-08-24 03:13+0000\n"
+"POT-Creation-Date: 2015-04-09 14:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,6 +18,10 @@ msgstr ""
 msgid "Background image"
 msgstr ""
 
+#: brasil/gov/paginadestaque/upgrades/v1001/profile/types/sc.microsite.xml
+msgid "Featured Home"
+msgstr ""
+
 #: brasil/gov/paginadestaque/behaviors/metadata.py:49
 msgid "Footer links"
 msgstr ""
@@ -30,8 +34,16 @@ msgstr ""
 msgid "Height of the tile, in pixels."
 msgstr ""
 
+#: brasil/gov/paginadestaque/behaviors/expiration.py:37
+msgid "Invalid URL."
+msgstr ""
+
 #: brasil/gov/paginadestaque/behaviors/metadata.py:50
 msgid "Link"
+msgstr ""
+
+#: brasil/gov/paginadestaque/upgrades/v1001/profile/types/sc.microsite.xml
+msgid "Microsite for a campaign"
 msgstr ""
 
 #: brasil/gov/paginadestaque/profiles/default/types/sc.microsite.xml
@@ -68,10 +80,6 @@ msgstr ""
 
 #: brasil/gov/paginadestaque/behaviors/metadata.py:20
 msgid "URL"
-msgstr ""
-
-#: brasil/gov/paginadestaque/behaviors/expiration.py:37
-msgid "URL nao valida."
 msgstr ""
 
 #. Default: "Used in item listings and search results."

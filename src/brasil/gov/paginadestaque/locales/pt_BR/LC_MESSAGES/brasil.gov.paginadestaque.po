@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: 2014-08-24 03:13+0000\n"
+"POT-Creation-Date: 2015-04-09 14:36+0000\n"
 "PO-Revision-Date: 2014-08-24 00:18-0300\n"
 "Last-Translator: Héctor Velarde <hector.velarde@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +19,10 @@ msgstr ""
 msgid "Background image"
 msgstr "Imagem de fundo"
 
+#: brasil/gov/paginadestaque/upgrades/v1001/profile/types/sc.microsite.xml
+msgid "Featured Home"
+msgstr "Pagina Destaque"
+
 #: brasil/gov/paginadestaque/behaviors/metadata.py:49
 msgid "Footer links"
 msgstr "Links de rodapé"
@@ -31,9 +35,17 @@ msgstr "Altura"
 msgid "Height of the tile, in pixels."
 msgstr "Altura do tile, em píxels."
 
+#: brasil/gov/paginadestaque/behaviors/expiration.py:37
+msgid "Invalid URL."
+msgstr "URL não válida"
+
 #: brasil/gov/paginadestaque/behaviors/metadata.py:50
 msgid "Link"
 msgstr "Link"
+
+#: brasil/gov/paginadestaque/upgrades/v1001/profile/types/sc.microsite.xml
+msgid "Microsite for a campaign"
+msgstr "Microsite para uma campanha"
 
 #: brasil/gov/paginadestaque/profiles/default/types/sc.microsite.xml
 msgid "Microsite para uma campanha"
@@ -44,32 +56,16 @@ msgid "Pagina Destaque"
 msgstr "Página de Destaque"
 
 #: brasil/gov/paginadestaque/tiles/spacer.pt:14
-msgid ""
-"Remember to add a text describing the background image for accessibility "
-"reasons."
-msgstr ""
-"Lembre de adicionar um texto descrevendo a imagem de fundo por razões de "
-"accessibilidade."
+msgid "Remember to add a text describing the background image for accessibility reasons."
+msgstr "Lembre de adicionar um texto descrevendo a imagem de fundo por razões de accessibilidade."
 
 #: brasil/gov/paginadestaque/behaviors/interfaces.py:15
-msgid ""
-"Sets the background image to be used on the item. For accessibility reasons, "
-"you should not use background images as the sole method of conveying "
-"important information."
-msgstr ""
-"Estabelece a imagem de fundo que será usada no item. Por razões de "
-"acessibilidade, no deveria usar imagens de fundo como o único método de "
-"transmitir informação importante"
+msgid "Sets the background image to be used on the item. For accessibility reasons, you should not use background images as the sole method of conveying important information."
+msgstr "Estabelece a imagem de fundo que será usada no item. Por razões de acessibilidade, no deveria usar imagens de fundo como o único método de transmitir informação importante"
 
 #: brasil/gov/paginadestaque/tiles/spacer.py:23
-msgid ""
-"Text used to describe the background image. For accessibility reasons, you "
-"should not use background images as the sole method of conveying important "
-"information."
-msgstr ""
-"Texto utilizado para descrever a imagem de fundo. Por razões de "
-"acessibilidade, no deveria usar imagens de fundo como o único método de "
-"transmitir informação importante"
+msgid "Text used to describe the background image. For accessibility reasons, you should not use background images as the sole method of conveying important information."
+msgstr "Texto utilizado para descrever a imagem de fundo. Por razões de acessibilidade, no deveria usar imagens de fundo como o único método de transmitir informação importante"
 
 #: brasil/gov/paginadestaque/tiles/spacer.py:22
 msgid "Title"
@@ -86,10 +82,6 @@ msgstr "Título (linha 2)"
 #: brasil/gov/paginadestaque/behaviors/metadata.py:20
 msgid "URL"
 msgstr "URL"
-
-#: brasil/gov/paginadestaque/behaviors/expiration.py:37
-msgid "URL nao valida."
-msgstr "URL não válida"
 
 #. Default: "Used in item listings and search results."
 #: brasil/gov/paginadestaque/behaviors/metadata.py:39
@@ -135,3 +127,4 @@ msgstr "Título (linha 2)"
 #: brasil/gov/paginadestaque/tiles/spacer.py:41
 msgid "msg_short_name_file"
 msgstr "Espaçador"
+

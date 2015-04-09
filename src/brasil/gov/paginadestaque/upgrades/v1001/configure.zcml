@@ -1,0 +1,31 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="brasil.gov.paginadestaque">
+
+  <!-- Profile -->
+  <genericsetup:registerProfile
+      name="default"
+      title="brasil.gov.paginadestaque: Versao 1001"
+      directory="profile"
+      description="Atualiza o pacote brasil.gov.paginadestaque para versao 1001"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <!-- Upgrade -->
+  <genericsetup:upgradeSteps
+      source="1000"
+      destination="1001"
+      profile="brasil.gov.paginadestaque:default">
+
+      <genericsetup:upgradeStep
+          title="Atualiza portal para versao 1001"
+          description="Ajusta tradução em inglês."
+          handler=".handler.apply_profile"
+          />
+
+  </genericsetup:upgradeSteps>
+
+</configure>

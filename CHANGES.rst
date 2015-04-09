@@ -4,6 +4,8 @@ Alterações
 1.0a3 (unreleased)
 ------------------
 
+- Adiciona internacionalização em inglês para termos faltantes. [idgserpro]
+
 - Ajusta conflito de estilo na barra do governo.
   [dbarbato]
 
