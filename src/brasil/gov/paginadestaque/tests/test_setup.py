@@ -43,8 +43,10 @@ class TestInstall(BaseTestCase):
         self.assertTrue(theme is not None)
         self.assertEqual(theme.__name__, 'destaques-cinza')
         self.assertEqual(theme.title, 'Página de Destaque - Tema Cinza')
-        self.assertEqual(theme.description,
-                         'Tema para Página de Destaque do Portal Padrão')
+        self.assertEqual(
+            theme.description,
+            'Tema para Página de Destaque do Portal Padrão'
+        )
         self.assertEqual(theme.rules, '/++theme++destaques-cinza/rules.xml')
         self.assertEqual(theme.absolutePrefix, '/++theme++destaques-cinza')
         self.assertEqual(theme.doctype, '<!DOCTYPE html>')
@@ -84,17 +86,17 @@ class TestUpgrade(BaseTestCase):
     """Ensure product upgrades work."""
 
     def list_upgrades(self, source, destination):
-        upgradeSteps = listUpgradeSteps(self.st,
-                                        self.profile,
-                                        source)
+        upgradeSteps = listUpgradeSteps(self.st, self.profile, source)
         if source == '0':
             source = (source, '0')
         else:
             source = (source, )
 
-        step = [step for step in upgradeSteps
-                if (step[0]['dest'] == (destination,))
-                and (step[0]['source'] == source)]
+        step = [
+            step for step in upgradeSteps
+            if (step[0]['dest'] == (destination,))
+            and (step[0]['source'] == source)
+        ]
         return step
 
     def execute_upgrade(self, source, destination):
@@ -102,16 +104,16 @@ class TestUpgrade(BaseTestCase):
         self.st.setLastVersionForProfile(self.profile, source)
 
         # Pegamos os upgrade steps
-        upgradeSteps = listUpgradeSteps(self.st,
-                                        self.profile,
-                                        source)
+        upgradeSteps = listUpgradeSteps(self.st, self.profile, source)
         if source == '0':
             source = (source, '0')
         else:
             source = (source, )
-        steps = [step for step in upgradeSteps
-                 if (step[0]['dest'] == (destination,))
-                 and (step[0]['source'] == source)][0]
+        steps = [
+            step for step in upgradeSteps
+            if (step[0]['dest'] == (destination,))
+            and (step[0]['source'] == source)
+        ][0]
         # Os executamos
         for step in steps:
             step['step'].doStep(self.st)
@@ -129,11 +131,15 @@ class TestUpgrade(BaseTestCase):
     def test_to1001_execution(self):
         self.execute_upgrade(u'1000', u'1001')
         portal_types = api.portal.get_tool('portal_types')
-        sc_microsite = [type_info
-                        for type_info in portal_types.listTypeInfo()
-                        if type_info.id == 'sc.microsite'][0]
-        self.assertTrue(sc_microsite.title == 'Featured Home' and
-                        sc_microsite.description == 'Microsite for a campaign')
+        sc_microsite = [
+            type_info
+            for type_info in portal_types.listTypeInfo()
+            if type_info.id == 'sc.microsite'
+        ][0]
+        self.assertTrue(
+            sc_microsite.title == 'Featured Home' and
+            sc_microsite.description == 'Microsite for a campaign'
+        )
 
     def test_ultimo_upgrade_igual_metadata_xml_filesystem(self):
         """
@@ -148,8 +154,7 @@ class TestUpgrade(BaseTestCase):
         upgradeSteps = listUpgradeSteps(self.st, self.profile, '')
         upgrades = [upgrade[0]['dest'][0] for upgrade in upgradeSteps]
         last_upgrade = sorted(upgrades, key=int)[-1]
-        self.assertEqual(upgrade_info['installedVersion'],
-                         last_upgrade)
+        self.assertEqual(upgrade_info['installedVersion'], last_upgrade)
 
 
 class TestUninstall(BaseTestCase):
