@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
+
 """ Modulo que implementa o viewlet de logo da Pagina Destaque"""
+
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone import api
 from plone.app.layout.viewlets.common import LogoViewlet as ViewletBase
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 
 class LogoViewlet(ViewletBase):

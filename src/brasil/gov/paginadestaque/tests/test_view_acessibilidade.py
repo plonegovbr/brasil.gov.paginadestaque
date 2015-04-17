@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
+
 from brasil.gov.paginadestaque.behaviors.metadata import IPaginaDestaque
 from brasil.gov.paginadestaque.interfaces import IBrowserLayer
 from brasil.gov.paginadestaque.testing import FUNCTIONAL_TESTING
+
 from plone import api
-from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
+from plone.app.testing import setRoles
 from plone.app.textfield import RichTextValue
 from plone.testing.z2 import Browser
 from zope.interface.declarations import directlyProvides

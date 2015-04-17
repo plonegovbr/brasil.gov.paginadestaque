@@ -1,8 +1,12 @@
 # -*- coding: utf-8 -*-
+
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+
 from brasil.gov.paginadestaque import _
+
 from collective.cover.tiles.base import IPersistentCoverTile
 from collective.cover.tiles.base import PersistentCoverTile
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+
 from zope import schema
 from zope.interface import implements
 

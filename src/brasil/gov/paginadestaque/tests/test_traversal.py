@@ -1,19 +1,22 @@
 # -*- coding: utf-8 -*-
+
+from DateTime import DateTime
+
 from brasil.gov.paginadestaque.behaviors.expiration import ISmartExpiration
 from brasil.gov.paginadestaque.behaviors.metadata import IPaginaDestaque
 from brasil.gov.paginadestaque.interfaces import IBrowserLayer
-from brasil.gov.paginadestaque.traversal.hooks import _is_expired
 from brasil.gov.paginadestaque.testing import FUNCTIONAL_TESTING
-from DateTime import DateTime
+from brasil.gov.paginadestaque.traversal.hooks import _is_expired
+
 from plone import api
 from plone.app.testing import SITE_OWNER_NAME
 from plone.app.testing import SITE_OWNER_PASSWORD
+from plone.app.testing import TEST_USER_ID
+from plone.app.testing import setRoles
+from plone.portlets.interfaces import IPortletType
 from plone.testing.z2 import Browser
 from zope.component import getUtility
 from zope.interface.declarations import directlyProvides
-from plone.portlets.interfaces import IPortletType
-from plone.app.testing import setRoles
-from plone.app.testing import TEST_USER_ID
 
 
 import datetime

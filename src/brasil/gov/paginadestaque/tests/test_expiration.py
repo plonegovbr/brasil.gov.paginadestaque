@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
-from brasil.gov.paginadestaque.behaviors.expiration import default_expires
+
 from brasil.gov.paginadestaque.behaviors.expiration import ISmartExpiration
 from brasil.gov.paginadestaque.behaviors.expiration import SmartExpiration
+from brasil.gov.paginadestaque.behaviors.expiration import default_expires
 from brasil.gov.paginadestaque.behaviors.expiration import validate_url
 from brasil.gov.paginadestaque.testing import INTEGRATION_TESTING
+
 from plone import api
 from plone.dexterity.interfaces import IDexterityFTI
 from zope.component import createObject
@@ -85,7 +87,7 @@ class SmartExpirationTestCase(unittest.TestCase):
 
     def test_validate_url_fail(self):
         # Erros de valor
-        self.assertRaises(Invalid, validate_url, u'http//www.simplesconsultoria.com.br')
+        self.assertRaises(Invalid, validate_url, u'http//www.simplesconsultoria.com.br')  # NOQA
         # Protocolos invalidos
-        self.assertRaises(Invalid, validate_url, u'ftp://ftp.funet.fi/pub/msx/')
+        self.assertRaises(Invalid, validate_url, u'ftp://ftp.funet.fi/pub/msx/')  # NOQA
         self.assertRaises(Invalid, validate_url, u'mailto://site@foo.bar')

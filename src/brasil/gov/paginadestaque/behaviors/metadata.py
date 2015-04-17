@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
+
 from Acquisition import aq_base
+
 from brasil.gov.paginadestaque import _
+
 from collective.z3cform.datagridfield import DataGridFieldFactory
 from collective.z3cform.datagridfield import DictRow
 from plone.app.dexterity.behaviors.metadata import MetadataBase
@@ -10,8 +13,8 @@ from plone.supermodel import model
 from z3c.form.interfaces import IAddForm
 from z3c.form.interfaces import IEditForm
 from zope import schema
-from zope.interface import alsoProvides
 from zope.interface import Interface
+from zope.interface import alsoProvides
 
 
 class ILinkRow(Interface):
