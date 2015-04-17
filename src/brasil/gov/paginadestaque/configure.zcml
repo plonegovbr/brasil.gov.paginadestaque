@@ -23,4 +23,14 @@
   <!-- Temas Diazo -->
   <include file="themes.zcml" />
 
+  <utility
+      factory=".config.HiddenProducts"
+      name="brasil.gov.paginadestaque"
+      />
+
+  <utility
+      factory=".config.HiddenProfiles"
+      name="brasil.gov.paginadestaque"
+      />
+
 </configure>

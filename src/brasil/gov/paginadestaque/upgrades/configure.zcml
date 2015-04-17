@@ -4,5 +4,6 @@
     i18n_domain="brasil.gov.paginadestaque">
 
   <!-- Passos de atualizacao -->
+  <include package=".v1001" />
 
 </configure>

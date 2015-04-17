@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+
+from Products.GenericSetup.upgrade import listUpgradeSteps
 from brasil.gov.paginadestaque.behaviors.interfaces import IBackgroundImage
 from brasil.gov.paginadestaque.config import PROJECTNAME
 from brasil.gov.paginadestaque.interfaces import IBrowserLayer
@@ -41,8 +43,10 @@ class TestInstall(BaseTestCase):
         self.assertTrue(theme is not None)
         self.assertEqual(theme.__name__, 'destaques-cinza')
         self.assertEqual(theme.title, 'Página de Destaque - Tema Cinza')
-        self.assertEqual(theme.description,
-                         'Tema para Página de Destaque do Portal Padrão')
+        self.assertEqual(
+            theme.description,
+            'Tema para Página de Destaque do Portal Padrão'
+        )
         self.assertEqual(theme.rules, '/++theme++destaques-cinza/rules.xml')
         self.assertEqual(theme.absolutePrefix, '/++theme++destaques-cinza')
         self.assertEqual(theme.doctype, '<!DOCTYPE html>')
@@ -56,13 +60,13 @@ class TestInstall(BaseTestCase):
         self.assertIn(u'spacer', tiles)
 
     def test_types_not_searched(self):
-        site_properties = api.portal.get_tool('portal_properties')['site_properties']
+        site_properties = api.portal.get_tool('portal_properties')['site_properties']  # NOQA
         types_not_searched = site_properties.types_not_searched
         self.assertTrue(len(types_not_searched) > 1)
         self.assertIn(u'sc.microsite', types_not_searched)
 
     def test_types_not_listed(self):
-        navtree_prop = api.portal.get_tool('portal_properties')['navtree_properties']
+        navtree_prop = api.portal.get_tool('portal_properties')['navtree_properties']  # NOQA
         metaTypesNotToList = navtree_prop.metaTypesNotToList
         self.assertTrue(len(metaTypesNotToList) > 1)
         self.assertIn(u'sc.microsite', metaTypesNotToList)
@@ -77,11 +81,80 @@ class TestInstall(BaseTestCase):
         available_tiles = api.portal.get_registry_record(record)
         self.assertIn(u'spacer', available_tiles)
 
+
+class TestUpgrade(BaseTestCase):
+    """Ensure product upgrades work."""
+
+    def list_upgrades(self, source, destination):
+        upgradeSteps = listUpgradeSteps(self.st, self.profile, source)
+        if source == '0':
+            source = (source, '0')
+        else:
+            source = (source, )
+
+        step = [
+            step for step in upgradeSteps
+            if (step[0]['dest'] == (destination,))
+            and (step[0]['source'] == source)
+        ]
+        return step
+
+    def execute_upgrade(self, source, destination):
+        # Setamos o profile para versao source
+        self.st.setLastVersionForProfile(self.profile, source)
+
+        # Pegamos os upgrade steps
+        upgradeSteps = listUpgradeSteps(self.st, self.profile, source)
+        if source == '0':
+            source = (source, '0')
+        else:
+            source = (source, )
+        steps = [
+            step for step in upgradeSteps
+            if (step[0]['dest'] == (destination,))
+            and (step[0]['source'] == source)
+        ][0]
+        # Os executamos
+        for step in steps:
+            step['step'].doStep(self.st)
+
     def test_version(self):
         self.assertEqual(
             self.st.getLastVersionForProfile(self.profile),
-            (u'1000',)
+            (u'1001',)
         )
+
+    def test_to1001_available(self):
+        step = self.list_upgrades(u'1000', u'1001')
+        self.assertEqual(len(step), 1)
+
+    def test_to1001_execution(self):
+        self.execute_upgrade(u'1000', u'1001')
+        portal_types = api.portal.get_tool('portal_types')
+        sc_microsite = [
+            type_info
+            for type_info in portal_types.listTypeInfo()
+            if type_info.id == 'sc.microsite'
+        ][0]
+        self.assertTrue(
+            sc_microsite.title == 'Featured Home' and
+            sc_microsite.description == 'Microsite for a campaign'
+        )
+
+    def test_ultimo_upgrade_igual_metadata_xml_filesystem(self):
+        """
+        Testa se o número do último upgradeStep disponível é o mesmo do
+        metadata.xml do profile.
+        É também útil para garantir que para toda alteração feita no version
+        do metadata.xml tenha um upgradeStep associado.
+        Esse teste parte da premissa que o número dos upgradeSteps é sempre
+        sequencial.
+        """
+        upgrade_info = self.qi.upgradeInfo(PROJECTNAME)
+        upgradeSteps = listUpgradeSteps(self.st, self.profile, '')
+        upgrades = [upgrade[0]['dest'][0] for upgrade in upgradeSteps]
+        last_upgrade = sorted(upgrades, key=int)[-1]
+        self.assertEqual(upgrade_info['installedVersion'], last_upgrade)
 
 
 class TestUninstall(BaseTestCase):

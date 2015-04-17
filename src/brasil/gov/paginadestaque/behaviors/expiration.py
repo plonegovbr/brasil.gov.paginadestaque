@@ -37,7 +37,7 @@ def validate_url(value):
         return True
     regex = re.compile(r'(%s)s?://[^\s\r\n]+' % '|'.join(valid_protocols))
     if not regex.match(value):
-        raise Invalid(_(u'URL nao valida.'))
+        raise Invalid(_(u'Invalid URL.'))
     return True
 
 
