@@ -2,8 +2,8 @@
 from Acquisition import aq_inner
 from brasil.gov.paginadestaque.behaviors.interfaces import IBackgroundImage
 from brasil.gov.paginadestaque.interfaces import IBrowserLayer
-from collective.cover.content import View as CoverBaseView
-from collective.cover.content import ICover
+from collective.cover.browser.cover import View as CoverBaseView
+from collective.cover.interfaces import ICover
 from five import grok
 from plone.memoize import view
 
