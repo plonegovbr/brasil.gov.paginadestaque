@@ -13,7 +13,7 @@ ${BACKGROUND_IMAGE_BEHAVIOR_SELECTOR}  form-widgets-brasil-gov-paginadestaque-be
 ${BACKGROUND_IMAGE_BUTTON_SELECTOR}  form-widgets-IBackgroundImage-background_image-input
 ${BACKGROUND_IMAGE_STYLE}  background: url("@@images/background_image")
 ${COVER_BEHAVIORS_URL}  dexterity-types/collective.cover.content/@@behaviors
-${IMAGE}  ${BUILDOUT_DIRECTORY}/src/collective/cover/testing/input/canoneye.jpg
+${IMAGE}  ${BUILDOUT_DIRECTORY}/src/brasil/gov/paginadestaque/tests/640px-Mandel_zoom_00_mandelbrot_set.jpg
 
 *** Test cases ***
 

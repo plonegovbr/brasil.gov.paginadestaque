@@ -4,9 +4,10 @@ sudo: false
 cache:
   directories:
   - eggs
-env: PLONE_VERSION=4.3
+  - parts/node
+matrix:
+  fast_finish: true
 install:
-- sed -ie "s#test-4.3.x.cfg#test-$PLONE_VERSION.x.cfg#" buildout.cfg
 - python bootstrap.py
 - bin/buildout annotate
 - bin/buildout -Nq
@@ -18,7 +19,7 @@ script:
 - bin/code-analysis
 - bin/test
 after_success:
-- bin/createcoverage
+- bin/createcoverage -t "--layer=!Acceptance"
 - pip install -q coveralls
 - coveralls
 notifications:
