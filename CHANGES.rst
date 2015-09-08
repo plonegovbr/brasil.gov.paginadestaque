@@ -1,7 +1,7 @@
 Alterações
 ===========
 
-1.0a3 (unreleased)
+1.0b1 (2015-09-08)
 ------------------
 
 - Corrige localização da view padrão no release 1.0a9 do collective.cover.
