@@ -1,8 +1,6 @@
 [report]
+include =
+    src/brasil/gov/paginadestaque/*
 omit =
-    /home/*/.buildout/eggs/*
-    /usr/*
-    bin/test
-    buildout-cache/eggs/*
-    eggs/*
-    parts/*
+    */test*
+    */upgrades/*
