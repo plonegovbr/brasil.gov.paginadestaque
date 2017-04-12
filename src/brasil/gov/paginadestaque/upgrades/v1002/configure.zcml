@@ -1,0 +1,21 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:gs="http://namespaces.zope.org/genericsetup"
+    i18n_domain="brasil.gov.paginadestaque">
+
+  <!-- Upgrade Steps -->
+  <gs:upgradeSteps
+      source="1001"
+      destination="1002"
+      profile="brasil.gov.paginadestaque:default">
+
+      <gs:upgradeStep
+          title="Cook Resources"
+          description="Atualiza estilos da configuração do brasil.gov.paginadestaque."
+          handler="brasil.gov.paginadestaque.upgrades.csscookresources"
+          />
+
+  </gs:upgradeSteps>
+
+</configure>
