@@ -1,6 +1,3 @@
-.header-border {
-  border-top: 2px solid #dfdfdf;
-}
 .nav-border {
   border-right: 1px solid #98999b;
 }
@@ -36,7 +33,6 @@ body {
 #header {
   color: #2d66cf;
   padding: 14px 0 0 0;
-  border-top: 2px solid #dfdfdf;
   background: -webkit-linear-gradient(#f2f2f2, #d9d9d9);
   /* For Safari */
   background: -o-linear-gradient(#f2f2f2, #d9d9d9);
