@@ -4,7 +4,7 @@
 // Altere as cores principais para criar um novo tema
 
 // Basic Colors
-@main-bg: #fff;
+@main-bg: #ffffff;
 @main-text: #111111;
 @main-color: #f2f2f2;
 
@@ -13,7 +13,6 @@
 @header2: darken(@header, 10%);
 @header-text: #2d66cf;
 @header-link: @header-text;
-.header-border {border-top: 2px solid #dfdfdf;}
 
 // Navegacao
 @nav: #d5d6d8;
@@ -59,7 +58,6 @@ body {
 #header {
   color: @header-text;
   padding: 14px 0 0 0;
-  .header-border;
   .gradient;
 }
 #accessibility {
@@ -89,7 +87,7 @@ body {
 #portal-title {
   margin-bottom: 25px;
 }
-nav {
+#navigation {
   .gradient-nav
 }
 #portal-globalnav {
@@ -109,7 +107,7 @@ nav {
 #portal-globalnav .selected a:hover {
     background: transparent;
 }
-nav ul {
+#navigation ul {
   line-height: 20px;
   padding: 5px 0;
   min-height: 18px;
@@ -119,12 +117,12 @@ nav ul {
   line-height: 32px !important;
   width: inherit !important;
 }
-nav li {
+#navigation li {
   margin-right: 10px;
   padding-right: 10px;
   .nav-border;
 }
-nav li.last-item {
+#navigation li.last-item {
   border-right: none;
 }
 #main {
@@ -176,7 +174,7 @@ div.width-16 {
 #footer {
   padding: 0 0 20px 0 !important;
 }
-#footer .footer-logos {
+#wrapper #footer .footer-logos {
   background: @footer;
 }
 
@@ -217,8 +215,8 @@ div.width-16 {
 .contraste #header a {
   color: #fff !important;
 }
-.contraste nav,
-.contraste nav ul,
+.contraste #navigation,
+.contraste #navigation ul,
 .contraste #header nav ul a {
   background: #333 !important;
   color: #fff !important;
@@ -262,15 +260,15 @@ div.width-16 {
       background: @header2 url("img/bg-menu-mobile.png") top right no-repeat;
     }
 
-    nav ul {
+    #navigation ul {
       display: none;
     }
 
-    nav.ativo ul {
+    #navigation.ativo ul {
       display: block;
     }
 
-    nav ul li {
+    #navigation ul li {
       display: block;
       padding: 1em;
       font-weight: bold;

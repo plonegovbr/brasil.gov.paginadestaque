@@ -4,7 +4,8 @@ Alterações
 1.0rc1 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Corrige Tema Cinza para funcionar com nova versao do brasil.gov.barra.
+  [shogunbr]
 
 
 1.0b1 (2015-09-08)
