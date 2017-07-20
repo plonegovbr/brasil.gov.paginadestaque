@@ -127,3 +127,19 @@ msgstr ""
 msgid "msg_short_name_file"
 msgstr ""
 
+#: brasil/gov/paginadestaque/browser/viewlets/templates/acessibilidade.pt:3
+msgid "Go to content <span>1</span>"
+msgstr ""
+
+#: brasil/gov/paginadestaque/browser/viewlets/templates/acessibilidade.pt:17
+msgid "content"
+msgstr ""
+
+#: brasil/gov/paginadestaque/browser/viewlets/templates/acessibilidade.pt:9
+msgid "Go to navigation <span>2</span>"
+msgstr ""
+
+#: brasil/gov/v/browser/viewlets/templates/acessibilidade.pt:20
+msgid "navigation"
+msgstr ""
+

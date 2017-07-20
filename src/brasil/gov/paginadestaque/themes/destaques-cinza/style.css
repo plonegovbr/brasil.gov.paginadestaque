@@ -52,6 +52,12 @@ body {
   background: #5584da;
   color: #f2f2f2;
 }
+.anchor {
+    display: block;
+    font-size: 0;
+    height: 0;
+    width: 0;
+}
 #portal-siteactions {
   border-bottom: 1px dotted #2d66cf;
 }

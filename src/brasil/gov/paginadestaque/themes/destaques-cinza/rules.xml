@@ -58,6 +58,10 @@
         <replace css:content="#doormat-container" css:theme="#doormat" />
         <replace css:content-children="#portal-footer" css:theme="#footer-info" />
         <after css:content="#portal-languageselector" css:theme="#logo" />
+        <replace css:theme="#accessibility" css:content="#accessibility" />
+        <replace css:theme="#acontent" css:content="#acontent" css:if-content="#acontent"/>
+        <replace css:theme="#anavigation" css:content="#anavigation" css:if-content="#anavigation"/>
+        <replace css:theme="#afooter" css:content="#afooter" css:if-content="#afooter"/>
         <drop css:content="#viewlet-below-content-body" />
         <replace css:theme="#barra_brasil_js" css:content-children="#barra_brasil_js" />
         <after theme-children="/html/body" css:content-children="#plone-analytics" />

@@ -128,3 +128,18 @@ msgstr "Título (linha 2)"
 msgid "msg_short_name_file"
 msgstr "Espaçador"
 
+#: brasil/gov/paginadestaque/browser/viewlets/templates/acessibilidade.pt:3
+msgid "Go to content <span>1</span>"
+msgstr "Ir para o conte&uacute;do <span>1</span>"
+
+#: brasil/gov/paginadestaque/browser/viewlets/templates/acessibilidade.pt:17
+msgid "content"
+msgstr "conteúdo"
+
+#: brasil/gov/paginadestaque/browser/viewlets/templates/acessibilidade.pt:9
+msgid "Go to navigation <span>2</span>"
+msgstr "Ir para o menu <span>2</span>"
+
+#: brasil/gov/v/browser/viewlets/templates/acessibilidade.pt:20
+msgid "navigation"
+msgstr "menu"
