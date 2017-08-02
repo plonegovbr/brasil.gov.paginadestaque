@@ -11,4 +11,12 @@
   <include package="five.grok" />
   <grok:grok package="." />
 
+  <browser:page
+    for="collective.cover.interfaces.ICover"
+    name="view"
+    class=".views.overrides.CoverOverridesView"
+    permission="zope2.View"
+    template="views/templates/cover_overrides_view.pt"
+    layer="brasil.gov.paginadestaque.interfaces.IBrowserLayer"/>
+
 </configure>
