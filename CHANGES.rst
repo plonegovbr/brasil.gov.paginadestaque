@@ -1,12 +1,25 @@
 Alterações
 ===========
 
+unreleased
+
+
 1.0rc1 (unreleased)
 -------------------
 
 - Corrige Tema Cinza para funcionar com nova versao do brasil.gov.barra.
   [shogunbr]
 
+- Substitue o h1 por div no portal logo para adequar o portal a acessibilidade.
+  [idgserpro]
+  
+- Insere descrição para os links vazios acontent, anavigation e afooter para atender os critérios de acessibilidade.
+  [idgserpro]
+  
+- Altera a forma como a view do tipo capa é registrada. Foi registrada pelo zcml e retirado o registro por grok. A
+  alteração foi necessária para corrigir a funcionalidade de imagem de background da capa.
+  [idgserpro]
+  
 
 1.0b1 (2015-09-08)
 ------------------
