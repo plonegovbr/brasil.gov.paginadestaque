@@ -60,7 +60,6 @@ class AccessibilityTestCase(unittest.TestCase):
         theme = getTheme('destaques-cinza')
         applyTheme(theme)
         self.settings.enabled = True
-        import transaction
         transaction.commit()
 
         browser = self.browser

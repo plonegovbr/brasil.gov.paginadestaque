@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-04-09 14:36+0000\n"
+"POT-Creation-Date: 2017-08-23 12:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,43 +14,82 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
+#: brasil/gov/paginadestaque/profiles.zcml:16
+msgid ".gov.br: Página Destaque"
+msgstr ""
+
+#: brasil/gov/paginadestaque/profiles.zcml:25
+msgid ".gov.br: Página Destaque (Remoção)"
+msgstr ""
+
+#: brasil/gov/paginadestaque/tiles/configure.zcml:17
+msgid "A tile to leave some free vertical space and deal with lack of accessibility of background images."
+msgstr ""
+
+#: brasil/gov/paginadestaque/behaviors/configure.zcml:30
+msgid "Adds the possibility of having a background image on the default view of the item."
+msgstr ""
+
+#: brasil/gov/paginadestaque/behaviors/configure.zcml:15
+msgid "Adds title_1, title_2, description and links fields."
+msgstr ""
+
+#: brasil/gov/paginadestaque/upgrades/v1001/configure.zcml:15
+msgid "Atualiza o pacote brasil.gov.paginadestaque para versao 1001"
+msgstr ""
+
+#: brasil/gov/paginadestaque/behaviors/configure.zcml:30
 #: brasil/gov/paginadestaque/behaviors/interfaces.py:14
 msgid "Background image"
 msgstr ""
 
+#: brasil/gov/paginadestaque/profiles.zcml:16
+msgid "Complemento para a criação de campanhas e hotsites dentro de um Portal Padrão."
+msgstr ""
+
+#: brasil/gov/paginadestaque/behaviors/configure.zcml:23
+msgid "Expires and redirect"
+msgstr ""
+
+#: brasil/gov/paginadestaque/profiles/default/types/sc.microsite.xml
 #: brasil/gov/paginadestaque/upgrades/v1001/profile/types/sc.microsite.xml
 msgid "Featured Home"
 msgstr ""
 
-#: brasil/gov/paginadestaque/behaviors/metadata.py:49
+#: brasil/gov/paginadestaque/behaviors/metadata.py:52
 msgid "Footer links"
 msgstr ""
 
-#: brasil/gov/paginadestaque/tiles/spacer.py:15
+#: brasil/gov/paginadestaque/browser/viewlets/templates/acessibilidade.pt:3
+msgid "Go to content <span>1</span>"
+msgstr ""
+
+#: brasil/gov/paginadestaque/browser/viewlets/templates/acessibilidade.pt:9
+msgid "Go to navigation <span>2</span>"
+msgstr ""
+
+#: brasil/gov/paginadestaque/tiles/spacer.py:19
 msgid "Height"
 msgstr ""
 
-#: brasil/gov/paginadestaque/tiles/spacer.py:16
+#: brasil/gov/paginadestaque/tiles/spacer.py:20
 msgid "Height of the tile, in pixels."
 msgstr ""
 
-#: brasil/gov/paginadestaque/behaviors/expiration.py:37
+#: brasil/gov/paginadestaque/behaviors/expiration.py:40
 msgid "Invalid URL."
 msgstr ""
 
-#: brasil/gov/paginadestaque/behaviors/metadata.py:50
+#: brasil/gov/paginadestaque/behaviors/metadata.py:53
 msgid "Link"
 msgstr ""
 
+#: brasil/gov/paginadestaque/profiles/default/types/sc.microsite.xml
 #: brasil/gov/paginadestaque/upgrades/v1001/profile/types/sc.microsite.xml
 msgid "Microsite for a campaign"
 msgstr ""
 
-#: brasil/gov/paginadestaque/profiles/default/types/sc.microsite.xml
-msgid "Microsite para uma campanha"
-msgstr ""
-
-#: brasil/gov/paginadestaque/profiles/default/types/sc.microsite.xml
+#: brasil/gov/paginadestaque/behaviors/configure.zcml:15
 msgid "Pagina Destaque"
 msgstr ""
 
@@ -58,88 +97,95 @@ msgstr ""
 msgid "Remember to add a text describing the background image for accessibility reasons."
 msgstr ""
 
+#: brasil/gov/paginadestaque/profiles.zcml:25
+msgid "Remove o complemento"
+msgstr ""
+
 #: brasil/gov/paginadestaque/behaviors/interfaces.py:15
 msgid "Sets the background image to be used on the item. For accessibility reasons, you should not use background images as the sole method of conveying important information."
 msgstr ""
 
-#: brasil/gov/paginadestaque/tiles/spacer.py:23
+#: brasil/gov/paginadestaque/behaviors/configure.zcml:23
+msgid "Smart expiration"
+msgstr ""
+
+#: brasil/gov/paginadestaque/tiles/configure.zcml:17
+msgid "Spacer Tile"
+msgstr ""
+
+#: brasil/gov/paginadestaque/tiles/spacer.py:27
 msgid "Text used to describe the background image. For accessibility reasons, you should not use background images as the sole method of conveying important information."
 msgstr ""
 
-#: brasil/gov/paginadestaque/tiles/spacer.py:22
+#: brasil/gov/paginadestaque/tiles/spacer.py:26
 msgid "Title"
 msgstr ""
 
-#: brasil/gov/paginadestaque/behaviors/metadata.py:18
+#: brasil/gov/paginadestaque/behaviors/metadata.py:21
 msgid "Title 1"
 msgstr ""
 
-#: brasil/gov/paginadestaque/behaviors/metadata.py:19
+#: brasil/gov/paginadestaque/behaviors/metadata.py:22
 msgid "Title 2"
 msgstr ""
 
-#: brasil/gov/paginadestaque/behaviors/metadata.py:20
+#: brasil/gov/paginadestaque/behaviors/metadata.py:23
 msgid "URL"
 msgstr ""
 
-#. Default: "Used in item listings and search results."
-#: brasil/gov/paginadestaque/behaviors/metadata.py:39
-msgid "help_description"
-msgstr ""
-
-#. Default: "When this date is reached, the content will no longer be visible in listings and searches."
-#: brasil/gov/paginadestaque/behaviors/expiration.py:47
-msgid "help_expiration_date"
-msgstr ""
-
-#. Default: "After expiration, requests will be redirected to the url filled in here."
-#: brasil/gov/paginadestaque/behaviors/expiration.py:56
-msgid "help_expires_redirect"
-msgstr ""
-
-#. Default: "Summary"
-#: brasil/gov/paginadestaque/behaviors/metadata.py:38
-msgid "label_description"
-msgstr ""
-
-#. Default: "Expiration Date"
-#: brasil/gov/paginadestaque/behaviors/expiration.py:45
-msgid "label_expiration_date"
-msgstr ""
-
-#. Default: "Redirect to"
-#: brasil/gov/paginadestaque/behaviors/expiration.py:55
-msgid "label_expires_redirect"
-msgstr ""
-
-#. Default: "Title 1"
-#: brasil/gov/paginadestaque/behaviors/metadata.py:28
-msgid "label_title_1"
-msgstr ""
-
-#. Default: "Title 2"
-#: brasil/gov/paginadestaque/behaviors/metadata.py:33
-msgid "label_title_2"
-msgstr ""
-
-#. Default: "Spacer"
-#: brasil/gov/paginadestaque/tiles/spacer.py:41
-msgid "msg_short_name_file"
-msgstr ""
-
-#: brasil/gov/paginadestaque/browser/viewlets/templates/acessibilidade.pt:3
-msgid "Go to content <span>1</span>"
+#: brasil/gov/paginadestaque/upgrades/v1001/configure.zcml:15
+msgid "brasil.gov.paginadestaque: Versao 1001"
 msgstr ""
 
 #: brasil/gov/paginadestaque/browser/viewlets/templates/acessibilidade.pt:17
 msgid "content"
 msgstr ""
 
-#: brasil/gov/paginadestaque/browser/viewlets/templates/acessibilidade.pt:9
-msgid "Go to navigation <span>2</span>"
+#. Default: "Used in item listings and search results."
+#: brasil/gov/paginadestaque/behaviors/metadata.py:42
+msgid "help_description"
 msgstr ""
 
-#: brasil/gov/v/browser/viewlets/templates/acessibilidade.pt:20
+#. Default: "When this date is reached, the content will no longer be visible in listings and searches."
+#: brasil/gov/paginadestaque/behaviors/expiration.py:50
+msgid "help_expiration_date"
+msgstr ""
+
+#. Default: "After expiration, requests will be redirected to the url filled in here."
+#: brasil/gov/paginadestaque/behaviors/expiration.py:59
+msgid "help_expires_redirect"
+msgstr ""
+
+#. Default: "Summary"
+#: brasil/gov/paginadestaque/behaviors/metadata.py:41
+msgid "label_description"
+msgstr ""
+
+#. Default: "Expiration Date"
+#: brasil/gov/paginadestaque/behaviors/expiration.py:48
+msgid "label_expiration_date"
+msgstr ""
+
+#. Default: "Redirect to"
+#: brasil/gov/paginadestaque/behaviors/expiration.py:58
+msgid "label_expires_redirect"
+msgstr ""
+
+#. Default: "Title 1"
+#: brasil/gov/paginadestaque/behaviors/metadata.py:31
+msgid "label_title_1"
+msgstr ""
+
+#. Default: "Title 2"
+#: brasil/gov/paginadestaque/behaviors/metadata.py:36
+msgid "label_title_2"
+msgstr ""
+
+#. Default: "Spacer"
+#: brasil/gov/paginadestaque/tiles/spacer.py:45
+msgid "msg_short_name_file"
+msgstr ""
+
+#: brasil/gov/paginadestaque/browser/viewlets/templates/acessibilidade.pt:20
 msgid "navigation"
 msgstr ""
-

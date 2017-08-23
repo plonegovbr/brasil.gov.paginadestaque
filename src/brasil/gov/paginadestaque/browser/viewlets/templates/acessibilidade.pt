@@ -12,7 +12,7 @@
                         </a>
                     </li>
                 </ul>
-                <ul i18n:domain="brasil.gov.paginadestaque" id="anchor" style="display:none;">
+                <ul i18n:domain="brasil.gov.paginadestaque" id="anchor">
                     <li>
                         <a name="acontent" id="acontent" class="anchor" i18n:translate="">content</a>
                     </li>
