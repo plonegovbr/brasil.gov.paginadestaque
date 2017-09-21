@@ -1,7 +1,7 @@
 Alterações
 ===========
 
-1.0rc1 (unreleased)
+1.0rc1 (2017-09-21)
 -------------------
 
 - Corrige Tema Cinza para funcionar com nova versao do brasil.gov.barra.
