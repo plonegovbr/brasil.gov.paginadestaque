@@ -1,23 +1,17 @@
 # -*- coding: utf-8 -*-
-from brasil.gov.paginadestaque.interfaces import IBrowserLayer
-from five import grok
 from plone import api
 from plone.memoize import view
-from sc.microsite.interfaces import IMicrosite
+from Products.Five.browser import BrowserView
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 
-grok.templatedir('templates')
-
-
-class AcessibilidadeView(grok.View):
-
+class AcessibilidadeView(BrowserView):
     """Adiciona uma view chamada acessibilidade a raiz de um microsite."""
 
-    grok.context(IMicrosite)
-    grok.layer(IBrowserLayer)
-    grok.name('acessibilidade')
-    grok.require('zope2.View')
-    grok.template('acessibilidade')
+    index = ViewPageTemplateFile('templates/acessibilidade.pt')
+
+    def __call__(self):
+        return self.index()
 
     @view.memoize
     def content(self):

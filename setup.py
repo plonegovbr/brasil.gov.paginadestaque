@@ -40,7 +40,6 @@ setup(
     install_requires=[
         'collective.cover',
         'collective.z3cform.datagridfield',
-        'five.grok',
         'plone.api',
         'plone.app.upgrade',
         'Products.CMFPlone >=4.3',
@@ -54,7 +53,7 @@ setup(
         'test': [
             'mock',
             'plone.app.robotframework',
-            'plone.app.testing [robot] >=4.2.2',
+            'plone.app.testing [robot]',
             'plone.browserlayer',
             'plone.testing',
             'robotsuite',
