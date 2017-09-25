@@ -1,8 +1,8 @@
 Alterações
 ===========
 
-1.0rc2 (unreleased)
--------------------
+1.1 (2017-09-25)
+----------------
 
 - Remove dependência no five.grok.
   [hvelarde]
