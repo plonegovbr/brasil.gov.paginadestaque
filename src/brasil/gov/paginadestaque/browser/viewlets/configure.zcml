@@ -53,6 +53,18 @@
 
 <configure zcml:condition="installed brasil.gov.portal">
   <!-- Sobreescrevemos os viewlets do Portal Padrao -->
+
+  <!-- A viewlet foi necessaria para permitir a traducao dos link
+       acontent e anavigation para o tema destaques-cinza -->
+  <browser:viewlet
+      name="brasil.gov.portal.acessibilidade"
+      manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+      class="plone.app.layout.viewlets.common.ViewletBase"
+      permission="zope2.View"
+      template="templates/acessibilidade.pt"
+      layer="brasil.gov.paginadestaque.interfaces.IPaginaDestaque"
+      />
+
   <browser:viewlet
       name="brasil.gov.portal.servicos"
       manager="plone.app.layout.viewlets.interfaces.IPortalHeader"

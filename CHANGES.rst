@@ -4,7 +4,12 @@ Alterações
 1.2 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Substitue o h1 por div no portal logo para adequar o portal a acessibilidade.
+  Se você possui temas customizados baseados no desse pacote, lembre-se de revisá-los para corrigir possíveis incompatibilidades.
+  [idgserpro]
+
+- Insere descrição para os links vazios acontent, anavigation e afooter para atender aos critérios de acessibilidade.
+  [idgserpro]
 
 
 1.1 (2017-09-25)

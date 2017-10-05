@@ -1,0 +1,22 @@
+<ul i18n:domain="brasil.gov.paginadestaque" id="accessibility">
+  <li>
+    <a accesskey="1" i18n:translate="" href="#acontent" id="link-conteudo">
+      Go to content
+      <span>1</span>
+    </a>
+  </li>
+  <li>
+    <a accesskey="2" i18n:translate="" href="#anavigation" id="link-navegacao">
+      Go to navigation
+      <span>2</span>
+    </a>
+  </li>
+</ul>
+<ul i18n:domain="brasil.gov.paginadestaque" id="anchor">
+  <li>
+    <a name="acontent" id="acontent" class="anchor" i18n:translate="">content</a>
+  </li>
+  <li>
+    <a name="anavigation" id="anavigation" class="anchor" i18n:translate="">navigation</a>
+  </li>
+</ul>
