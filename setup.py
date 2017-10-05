@@ -3,7 +3,7 @@
 from setuptools import find_packages
 from setuptools import setup
 
-version = '1.2.dev0'
+version = '1.2'
 description = 'Complemento ao Portal Padrao para criacao de microsites e campanhas'
 long_description = (
     open('README.rst').read() + '\n' +
