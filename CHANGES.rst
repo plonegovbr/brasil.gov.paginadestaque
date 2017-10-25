@@ -4,7 +4,8 @@ Alterações
 1.3 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Garante uso de collective.z3cform.datagridfield >= 1.3 para evitar inclusão indireta do Grok.
+  [hvelarde]
 
 
 1.2 (2017-10-05)

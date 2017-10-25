@@ -39,7 +39,7 @@ setup(
     zip_safe=False,
     install_requires=[
         'collective.cover',
-        'collective.z3cform.datagridfield',
+        'collective.z3cform.datagridfield >=1.3',  # avoid dependency on five.grok
         'plone.api',
         'plone.app.upgrade',
         'Products.CMFPlone >=4.3',
