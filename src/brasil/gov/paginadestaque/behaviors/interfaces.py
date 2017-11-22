@@ -1,6 +1,6 @@
 # coding: utf-8
 from collective.cover import _
-from plone.directives import form
+from plone.autoform.interfaces import IFormFieldProvider
 from plone.namedfile.field import NamedBlobImage
 from plone.supermodel import model
 from zope.interface import alsoProvides
@@ -19,4 +19,5 @@ class IBackgroundImage(model.Schema):
         required=False,
     )
 
-alsoProvides(IBackgroundImage, form.IFormFieldProvider)
+
+alsoProvides(IBackgroundImage, IFormFieldProvider)

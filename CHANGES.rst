@@ -4,6 +4,9 @@ Alterações
 1.3 (unreleased)
 ----------------
 
+- Remove dependência no plone.directives.form.
+  [hvelarde]
+
 - Garante uso de collective.z3cform.datagridfield >= 1.3 para evitar inclusão indireta do Grok.
   [hvelarde]
 
