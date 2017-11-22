@@ -4,6 +4,9 @@ Alterações
 1.3 (unreleased)
 ----------------
 
+- Atualiza dependências do pacote.
+  [hvelarde]
+
 - Remove dependência no plone.directives.form.
   [hvelarde]
 
