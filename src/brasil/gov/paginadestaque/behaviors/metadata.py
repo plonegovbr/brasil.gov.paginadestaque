@@ -121,4 +121,5 @@ class PaginaDestaque(MetadataBase):
         self.context.links = links
     links = property(_get_links, _set_links)
 
+
 alsoProvides(IPaginaDestaque, IFormFieldProvider)
