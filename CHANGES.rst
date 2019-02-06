@@ -4,6 +4,11 @@ Alterações
 1.3 (unreleased)
 ----------------
 
+- Exibe corretamente o valor do atributo "data-base-url" na tag Body. 
+  Corrige o erro na atribuição de permissões locais (@@sharing).
+  (closes `#plonegovbr/brasil.gov.portal#565 <https://github.com/plonegovbr/brasil.gov.portal/issues/565>`_).
+  [idgserpro]
+
 - Atualiza dependências do pacote.
   [hvelarde]
 
